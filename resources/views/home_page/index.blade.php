@@ -275,7 +275,11 @@
     <section id="features" class="features section">
 
       <div class="container" data-aos="fade-up">
-
+        <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Our Product</h2>
+        <p>Kami menawarkan solusi lengkap IT yang mencakup perangkat lunak yang disesuaikan, perangkat keras berkualitas tinggi, dan layanan pemeliharaan yang andal untuk memastikan operasional bisnis Anda berjalan tanpa hambatan.</p>
+      </div><!-- End Section Title -->
         <ul class="nav nav-tabs row gy-4 d-flex">
 
           <li class="nav-item col-6 col-md-4 col-lg-3">
@@ -488,7 +492,7 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Our Services</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <p>Kami menawarkan solusi lengkap IT yang mencakup perangkat lunak yang disesuaikan, perangkat keras berkualitas tinggi, dan layanan pemeliharaan yang andal untuk memastikan operasional bisnis Anda berjalan tanpa hambatan.</p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
