@@ -3,6 +3,9 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AdminController;
+// use App\Http\Middleware\Admin;
+// use App\Models\Admin;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,3 +36,5 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+Route::get('/post_page', [AdminController::class, 'index']);
+Route::post('/add_post', [AdminController::class, 'store']);
