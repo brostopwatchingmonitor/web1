@@ -36,6 +36,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/post_page', [AdminController::class, 'index']);
     Route::post('/add_post', [AdminController::class, 'store']);
     Route::get('/show_post', [AdminController::class, 'show']);
+    Route::get('/delete_post/{id}', [AdminController::class, 'destroy']);
+    
 });
 
 require __DIR__.'/auth.php';
