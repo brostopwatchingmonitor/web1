@@ -976,7 +976,9 @@
       </div>
 
     </section><!-- /Portfolio Section -->
-
+    
+      
+    
     <!-- Recent Posts Section -->
     <section id="recent-posts" class="recent-posts section">
 
@@ -987,36 +989,36 @@
       </div><!-- End Section Title -->
 
       <div class="container">
-
+        
         <div class="row gy-4">
-
+          @foreach ($post as $post )
           <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <article>
 
               <div class="post-img">
-                <img src="assets/img/blog/blog-1.jpg" alt="" class="img-fluid">
+                <img src="/postimage/{{ $post->image }}" alt="" class="img-fluid">
               </div>
 
-              <p class="post-category">Politics</p>
+              <p class="post-category">{{ $post->topic }}</p>
 
               <h2 class="title">
-                <a href="blog-details.html">Dolorum optio tempore voluptas dignissimos</a>
+                <a href="blog-details.html">{{ $post->title }}</a>
               </h2>
 
               <div class="d-flex align-items-center">
                 <img src="assets/img/blog/blog-author.jpg" alt="" class="img-fluid post-author-img flex-shrink-0">
                 <div class="post-meta">
-                  <p class="post-author">Maria Doe</p>
+                  <p class="post-author">{{ $post->name }}</p>
                   <p class="post-date">
-                    <time datetime="2022-01-01">Jan 1, 2022</time>
+                    <time datetime="2022-01-01">{{ $post->created_at }}</time>
                   </p>
                 </div>
               </div>
 
             </article>
           </div><!-- End post list item -->
-
-          <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          @endforeach
+          {{-- <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
             <article>
 
               <div class="post-img">
@@ -1066,7 +1068,7 @@
               </div>
 
             </article>
-          </div><!-- End post list item -->
+          </div><!-- End post list item --> --}}
 
         </div><!-- End recent posts list -->
 

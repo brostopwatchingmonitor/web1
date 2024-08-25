@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Admin;
 use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
@@ -29,7 +30,14 @@ class HomeController extends Controller
         }
     }
     public function homepage() {
-        return view("home_page.index");
+        $post = Admin::all();
+
+        return view("home_page.index", compact('post'));
+    }
+    public function homepage1() {
+        $post = Admin::all();
+
+        return view("home_page.news", compact('post'));
     }
 
     /**

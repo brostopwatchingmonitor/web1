@@ -3,7 +3,7 @@
     <div class="sidebar-header d-flex align-items-center">
       <div class="avatar"><img src="admincss/img/avatar-6.jpg" alt="..." class="img-fluid rounded-circle"></div>
       <div class="title">
-        <h1 class="h5">Mark Stephen</h1>
+        <h1 class="h5"><a href="/profile">Mark Stephen</a></h1>
         <p>Web Designer</p>
       </div>
     </div>
@@ -12,7 +12,7 @@
             <li ><a href="{{ url('home') }}"> <i class="icon-home"></i>Home </a></li>
             <li class="active"><a href="{{ url('post_page') }}"> <i class="icon-padnote"></i>Add Posts</a></li>
             <li><a href="{{ url('show_post') }}"> <i class="icon-windows"></i>Show Posts</a></li>
-            <li><a href="forms.html"> <i class="icon-padnote"></i>Forms </a></li>
+            <li ><a href=""> <i class="icon-padnote"></i>example </a></li>
             <li><a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-windows"></i>Example dropdown </a>
               <ul id="exampledropdownDropdown" class="collapse list-unstyled ">
                 <li><a href="#">Page</a></li>

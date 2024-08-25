@@ -25,7 +25,7 @@
         }
 
         .form1-control {
-            width: 500px;
+            width: 400px;
             height: auto;
             /* align-content: center; */
         }
@@ -61,6 +61,10 @@
                     <div class="div-center mb-3 ">
                         <label for="exampleFormControlInput1" class="form-label">Post Title</label>
                         <input type="title" name="title" class="form1-control" id="exampleFormControlInput1">
+                    </div>
+                    <div class="div-center mb-3 ">
+                        <label for="exampleFormControlInput1" class="form-label">Topic</label>
+                        <input type="title" name="topic" class="form1-control" id="exampleFormControlInput1">
                     </div>
                     {{-- <div class="div-center mb-3 ">
                         <label for="exampleFormControlTextarea1" class="form1-label">Post Descripsion</label>

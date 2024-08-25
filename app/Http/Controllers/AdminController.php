@@ -29,6 +29,7 @@ class AdminController extends Controller
      */
     public function store(Request $request)
     {   
+        date_default_timezone_set('Asia/Jakarta');
         $user= Auth()->user();
         $user_id=$user->id;
         $name=$user->name;
@@ -38,6 +39,7 @@ class AdminController extends Controller
         $post->title = $request->title;
         $post->description = $request->description;
         $post->post_status = 'active';
+        $post->topic =$request->topic;
 
         $post->user_id = $user_id;
         $post->name = $name;
@@ -67,17 +69,31 @@ class AdminController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Admin $admin)
+    public function edit(Admin $admin,string $id)
     {
-        //
+        $post = Admin::find($id);
+           
+        return view('home_admin.edit_page',compact('post'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Admin $admin)
-    {
-        //
+    public function update(Request $request, Admin $admin,string $id)
+    {   
+        date_default_timezone_set('Asia/Jakarta');
+        $data = Admin::find($id);
+        $data->title = $request->title;
+        $data->description = $request->description;
+        $data->topic =$request->topic;
+        $image=$request->image;
+        if ($image) {
+            $imagename=time().'.'.$image->getClientOriginalExtension();
+            $request->image->move('postimage', $imagename);
+            $data->image = $imagename; 
+        }
+        $data->save();
+        return redirect('/show_post')->with('message1', 'Post Updated Successfully');
     }
 
     /**

@@ -28,6 +28,7 @@ Route::get('/', [HomeController::class, 'homepage']);
 // })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::get('/home', [HomeController::class, 'index'])->middleware('auth')->name('home'); 
+Route::get('/news', [HomeController::class, 'index1'])->middleware('auth')->name('home'); 
 // Route::get('post', [HomeController::class, 'post'])->middleware(['auth', 'admin']);
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -37,6 +38,8 @@ Route::middleware('auth')->group(function () {
     Route::post('/add_post', [AdminController::class, 'store']);
     Route::get('/show_post', [AdminController::class, 'show']);
     Route::get('/delete_post/{id}', [AdminController::class, 'destroy']);
+    Route::get('/edit_post/{id}', [AdminController::class, 'edit']);
+    Route::post('/update_post/{id}', [AdminController::class, 'update']);
     
 });
 
