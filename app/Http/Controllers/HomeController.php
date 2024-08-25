@@ -39,6 +39,11 @@ class HomeController extends Controller
 
         return view("home_page.news", compact('post'));
     }
+    public function post_details(string $id, Request $request) {
+        $post = Admin::find($id);
+        
+        return view('home_page.postdetails', compact('post'));
+    }
 
     /**
      * Show the form for creating a new resource.

@@ -65,6 +65,11 @@ class AdminController extends Controller
 
         return view('home_admin.showpost', compact('post'));
     }
+    public function show1(Admin $admin) {
+        $post = Admin::all();
+
+        return view('home_page.news', compact('post'));
+    }
 
     /**
      * Show the form for editing the specified resource.

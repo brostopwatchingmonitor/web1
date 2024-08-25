@@ -1002,7 +1002,7 @@
               <p class="post-category">{{ $post->topic }}</p>
 
               <h2 class="title">
-                <a href="blog-details.html">{{ $post->title }}</a>
+                <a href="{{ url('post_details', $post->id) }}">{{ $post->title }}</a>
               </h2>
 
               <div class="d-flex align-items-center">
