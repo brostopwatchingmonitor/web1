@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Admin;
+use App\Models\Service;
 use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
@@ -20,7 +21,8 @@ class HomeController extends Controller
             if($usertype=='user')
             {
                 $post = Admin::all();
-                return view('home_page.index', compact('post'));
+                $service = Service::all();
+                return view('home_page.index', compact('post', 'service'));
             }
             else if($usertype=='admin')  {
                 $users = User::all();
@@ -33,8 +35,8 @@ class HomeController extends Controller
     }
     public function homepage() {
         $post = Admin::all();
-
-        return view("home_page.index", compact('post'));
+        $service = Service::all();
+        return view("home_page.index", compact('post','service'));
     }
     public function homepage1() {
         $post = Admin::all();

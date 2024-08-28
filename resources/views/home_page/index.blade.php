@@ -255,7 +255,8 @@
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
         <div class="row gy-5">
-
+          @foreach ($service as $service)
+            
           <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
             <div class="service-item">
               <div class="img">
@@ -266,127 +267,15 @@
                   <i class="bi bi-activity"></i>
                 </div>
                 <a href="service-details.html" class="stretched-link">
-                  <h3>IT Hardware</h3>
+                  <h3>{{ $service->title }}</h3>
                 </a>
-                <p>Keamanan adalah prioritas utama bagi 
-                  setiap bisnis. Dengan sistem CCTV 
-                  terintegrasi kami, Anda tidak hanya 
-                  mendapatkan pengawasan visual, tetapi 
-                  juga solusi keamanan yang holistik dan canggih. Sistem kami menggabungkan kamera beresolusi tinggi dengan 
-                  kemampuan pemantauan real-time yang dapat diakses dari perangkat apa pun, di mana pun Anda berada.</p>
+                <p>{{$service->description}}</p>
               </div>
             </div>
           </div><!-- End Service Item -->
+          @endforeach
 
-          <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
-            <div class="service-item">
-              <div class="img">
-                <img src="assets/img/foto/annie-spratt-QckxruozjRg-unsplash.jpg" style="width: 600px; height:auto;" class="img-fluid" alt="">
-              </div>
-              <div class="details position-relative">
-                <div class="icon">
-                  <i class="bi bi-broadcast"></i>
-                </div>
-                <a href="service-details.html" class="stretched-link">
-                  <h3>IT Software</h3>
-                </a>
-                <p>Di era digital yang serba cepat, 
-                  memiliki sistem manajemen konten (CMS) yang handal adalah 
-                  kunci untuk memastikan kelancaran operasional dan keberhasilan 
-                  proyek perusahaan Anda. Kami menawarkan CMS yang tidak hanya 
-                  kuat dan fleksibel, tetapi juga dirancang khusus untuk mempermudah
-                  integrasi dengan proyek dan data perusahaan Anda.</p>
-              </div>
-            </div>
-          </div><!-- End Service Item -->
-
-          {{-- <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="400">
-            <div class="service-item">
-              <div class="img">
-                <img src="assets/img/data_center.png" class="img-fluid" alt="">
-              </div>
-              <div class="details position-relative">
-                <div class="icon">
-                  <i class="bi bi-easel"></i>
-                </div>
-                <a href="service-details.html" class="stretched-link">
-                  <h3>Data Center</h3>
-                </a>
-                <p>The development of a company's business
-                  activities requires data management
-                  facilities that are bigger, more reliable and
-                  secure. In the application of the hyper converged based openstack framework, it
-                  can create efficiency and good performance.</p>
-              </div>
-            </div>
-          </div><!-- End Service Item --> --}}
-
-          {{-- <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="500">
-            <div class="service-item">
-              <div class="img">
-                <img src="assets/img/gambar_It_networking.jpg" class="img-fluid" alt="">
-              </div>
-              <div class="details position-relative">
-                <div class="icon">
-                  <i class="bi bi-bounding-box-circles"></i>
-                </div>
-                <a href="service-details.html" class="stretched-link">
-                  <h3>Networking</h3>
-                </a>
-                <p>Good network connectivity performance is
-                  important in this digital era, we can provide
-                  the best service in supporting the best
-                  network connectivity performance based
-                  on cable (UTP, Coaxial & Fiber Optic) and
-                  wireless (Wifi, Microwave & BTS).</p>
-                <a href="service-details.html" class="stretched-link"></a>
-              </div>
-            </div>
-          </div><!-- End Service Item --> --}}
-
-          {{-- <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="600">
-            <div class="service-item">
-              <div class="img">
-                <img src="assets/img/gambar_It_security.jpg" class="img-fluid" alt="">
-              </div>
-              <div class="details position-relative">
-                <div class="icon">
-                  <i class="bi bi-calendar4-week"></i>
-                </div>
-                <a href="service-details.html" class="stretched-link">
-                  <h3>Security System</h3>
-                </a>
-                <p>The use of CCTV surveillance and access
-                  control systems is able to assist in
-                  environmental surveillance activities of an
-                  organization or individual.</p>
-                <a href="service-details.html" class="stretched-link"></a>
-              </div>
-            </div>
-          </div><!-- End Service Item --> --}}
-
-          <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="700">
-            <div class="service-item">
-              <div class="img">
-                <img src="assets/img/foto/cms1.jpg" style="width: 600px; height:auto;" class="img-fluid" alt="">
-              </div>
-              <div class="details position-relative">
-                <div class="icon">
-                  <i class="bi bi-bounding-box-circles"></i>
-                </div>
-                <a href="service-details.html" class="stretched-link">
-                  <h3>IT Maintenance</h3>
-                </a>
-                <p>Dalam dunia bisnis yang dinamis, memiliki Sistem Manajemen Konten (CMS) 
-                  yang andal dan terintegrasi sangat penting untuk keberhasilan 
-                  proyek dan pengelolaan data perusahaan. Layanan IT Maintenance 
-                  kami tidak hanya memastikan bahwa CMS Anda berjalan dengan optimal, 
-                  tetapi juga menyediakan solusi integrasi yang mulus antara berbagai 
-                  proyek dan data perusahaan Anda.</p>
-                <a href="service-details.html" class="stretched-link"></a>
-              </div>
-            </div>
-          </div><!-- End Service Item -->
+         
 
         </div>
 

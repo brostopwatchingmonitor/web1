@@ -4,6 +4,8 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ServiceController;
+
 // use App\Http\Middleware\Admin;
 // use App\Models\Admin;
 
@@ -41,6 +43,11 @@ Route::middleware('auth')->group(function () {
     Route::get('/delete_post/{id}', [AdminController::class, 'destroy']);
     Route::get('/edit_post/{id}', [AdminController::class, 'edit']);
     Route::post('/update_post/{id}', [AdminController::class, 'update']);
+    Route::get('/service', [ServiceController::class, 'index']);
+    Route::post('/addservice', [ServiceController::class, 'store']);
+    Route::get('/edit_service/{id}', [ServiceController::class, 'edit']);
+    Route::post('/update_service/{id}', [ServiceController::class, 'update']);
+    Route::get('/delete_service/{id}', [ServiceController::class, 'destroy']);
     
 });
 
