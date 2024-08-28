@@ -19,10 +19,12 @@ class HomeController extends Controller
 
             if($usertype=='user')
             {
-                return view('home_page.index');
+                $post = Admin::all();
+                return view('home_page.index', compact('post'));
             }
             else if($usertype=='admin')  {
-                return view('home_admin.homepage');
+                $users = User::all();
+                return view('home_admin.homepage',compact('users'));
             }
             else{
                 return redirect()->back();

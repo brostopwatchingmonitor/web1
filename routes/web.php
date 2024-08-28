@@ -28,7 +28,7 @@ Route::get('/', [HomeController::class, 'homepage']);
 // })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::get('/home', [HomeController::class, 'index'])->middleware('auth')->name('home'); 
-Route::get('/news', [HomeController::class, 'homepage1'])->middleware('auth')->name('home'); 
+Route::get('/news', [HomeController::class, 'homepage1']);
 Route::get('/post_details/{id}', [HomeController::class, 'post_details']);
 // Route::get('post', [HomeController::class, 'post'])->middleware(['auth', 'admin']);
 Route::middleware('auth')->group(function () {
