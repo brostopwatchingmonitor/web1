@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\FaqController;
 use App\Http\Controllers\ServiceController;
 
 // use App\Http\Middleware\Admin;
@@ -48,6 +49,11 @@ Route::middleware('auth')->group(function () {
     Route::get('/edit_service/{id}', [ServiceController::class, 'edit']);
     Route::post('/update_service/{id}', [ServiceController::class, 'update']);
     Route::get('/delete_service/{id}', [ServiceController::class, 'destroy']);
+    Route::get('/faq', [FaqController::class, 'index']);
+    Route::post('/addfaq', [FaqController::class, 'store']);
+    Route::get('/edit_faq/{id}', [FaqController::class, 'edit']);
+    Route::post('/update_faq/{id}', [FaqController::class, 'update']);
+    Route::get('/delete_faq/{id}', [FaqController::class, 'destroy']);
     
 });
 

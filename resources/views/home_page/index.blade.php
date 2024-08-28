@@ -260,7 +260,7 @@
           <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
             <div class="service-item">
               <div class="img">
-                <img src="assets/img/foto/thisisengineering-32PpagSzeGs-unsplash.jpg" style="width: 600px; height:auto;" class="img-fluid" alt="">
+                <img src="/serviceimage/{{ $service->image }}" style="width: 600px; height:auto;" class="img-fluid" alt="">
               </div>
               <div class="details position-relative">
                 <div class="icon">
@@ -426,40 +426,24 @@
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
               </p>
             </div>
-
+            @foreach ($faq as $faq)
+              
             <div class="faq-container px-xl-5" data-aos="fade-up" data-aos-delay="200">
 
               <div class="faq-item faq-active">
                 <i class="faq-icon bi bi-question-circle"></i>
-                <h3>Where is PT Fasya Pratama Solusindo located ?</h3>
+                <h3>{{ $faq->title }} ?</h3>
                 <div class="faq-content">
-                  <p>PT Fasya Pratama Solusindo is located at CIBUBUR COUNTRY, RUKO FOOD
-                    PLAZA NO. 50, CIKEAS, KEC. GN.
-                    PUTRI, BOGOR, JAWA BARAT 16966
+                  <p>{{$faq->description}}
                    </p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div><!-- End Faq item-->
 
-              <div class="faq-item">
-                <i class="faq-icon bi bi-question-circle"></i>
-                <h3>What days is PT Fasya Pratama Solusindo open ?</h3>
-                <div class="faq-content">
-                  <p>PT Fasya Pratama Solusindo is Mon-Fri 09.00-17.00; closed Sat-Min open1.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <i class="faq-icon bi bi-question-circle"></i>
-                <h3>Is there a main contact for PT. Fasya Pratama Solusindo ?</h3>
-                <div class="faq-content">
-                  <p>You can contact PT Fasya Pratama Solusindo by phone using the number You can contact PT Fasya Pratama Solusindo by phone using the number +62 812-9902-0971</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
+              
 
             </div>
+            @endforeach
 
           </div>
 
@@ -772,26 +756,22 @@
           </div>
 
           <div class="col-lg-8">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form action="https://formspree.io/f/mayrlono" method="POST" role="form" class="php-email-form">
               <div class="row">
-                <div class="col-md-6 form-group">
+                {{-- <div class="col-md-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required="">
-                </div>
+                </div> --}}
                 <div class="col-md-6 form-group mt-3 mt-md-0">
                   <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required="">
                 </div>
               </div>
-              <div class="form-group mt-3">
+              {{-- <div class="form-group mt-3">
                 <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required="">
-              </div>
+              </div> --}}
               <div class="form-group mt-3">
                 <textarea class="form-control" name="message" placeholder="Message" required=""></textarea>
               </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
+              
               <div class="text-center"><button type="submit">Send Message</button></div>
             </form>
           </div><!-- End Contact Form -->
