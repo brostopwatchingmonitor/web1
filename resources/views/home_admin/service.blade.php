@@ -120,7 +120,7 @@ object-fit: cover;
     @include('layoutsadmin.header1')
     <div class="d-flex align-items-stretch">
         <!-- Sidebar Navigation-->
-        @include('layoutsadmin.nav')
+        @include('layoutsadmin.navservice')
         <!-- Sidebar Navigation end-->
         <div class="page-content">
             

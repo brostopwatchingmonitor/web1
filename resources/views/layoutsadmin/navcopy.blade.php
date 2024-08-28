@@ -12,7 +12,7 @@
             <li ><a href="{{ url('home') }}"> <i class="icon-home"></i>Home </a></li>
             <li class="active"><a href="{{ url('post_page') }}"> <i class="icon-padnote"></i>Add Posts</a></li>
             <li><a href="{{ url('show_post') }}"> <i class="icon-windows"></i>Show Posts</a></li>
-            <li ><a href=""> <i class="icon-padnote"></i>example </a></li>
+            <li ><a href="{{ url('service') }}"> <i class="icon-padnote"></i>Service</a></li>
             <li><a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-windows"></i>Example dropdown </a>
               <ul id="exampledropdownDropdown" class="collapse list-unstyled ">
                 <li><a href="#">Page</a></li>
@@ -20,7 +20,7 @@
                 <li><a href="#">Page</a></li>
               </ul>
             </li>
-            <li><a href="login.html"> <i class="icon-logout"></i>Login page </a></li>
+            <li><a href="{{ url('profile') }}"> <i class="icon-logout"></i>Profile</a></li>
     </ul><span class="heading">Extras</span>
     <ul class="list-unstyled">
       <li> <a href="#"> <i class="icon-settings"></i>Demo </a></li>
