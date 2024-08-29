@@ -430,7 +430,8 @@
               
             <div class="faq-container px-xl-5" data-aos="fade-up" data-aos-delay="200">
 
-              <div class="faq-item faq-active">
+              <div class="faq-item ">
+                {{-- faq-active --}}
                 <i class="faq-icon bi bi-question-circle"></i>
                 <h3>{{ $faq->title }} ?</h3>
                 <div class="faq-content">
