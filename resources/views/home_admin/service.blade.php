@@ -110,7 +110,7 @@ object-fit: cover;
     .hehe{
       gap: 120px;
     }
-        
+
   </style>
     <link href="https://cdn.datatables.net/v/bs5/dt-2.1.4/datatables.min.css" rel="stylesheet">
 </head>
@@ -123,15 +123,15 @@ object-fit: cover;
         @include('layoutsadmin.navservice')
         <!-- Sidebar Navigation end-->
         <div class="page-content">
-            
+
                 @if (session()->has('message1'))
-                    
+
                 <div class="alert alert-success">
                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
                     {{ session()->get('message1') }}
-                </div>    
+                </div>
                 @endif
-          
+
           <div class="container">
             <h1 class="title_deg">Home</h1>
             <button onclick="myFunction()" class="btn btn-success">hide/show Table</button>
@@ -205,7 +205,7 @@ object-fit: cover;
           ev.preventDefault();
           var urlToRedirect=ev.currentTarget.getAttribute('href');
           console.log(urlToRedirect);
-          
+
           swal({
             title: "Are you sure to delete this service ?",
             text: "you won't be able to revert this delete",

@@ -1,11 +1,14 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FaqController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
-use App\Http\Controllers\FaqController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\ServiceDetailsController;
+use App\Http\Controllers\Auth\RegisteredUserController;
+use App\Http\Controllers\Auth\AuthenticatedSessionController;
 
 // use App\Http\Middleware\Admin;
 // use App\Models\Admin;
@@ -30,9 +33,10 @@ Route::get('/', [HomeController::class, 'homepage']);
 //     return view('dashboard');
 // })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('/home', [HomeController::class, 'index'])->middleware('auth')->name('home'); 
+Route::get('/home', [HomeController::class, 'index'])->middleware('auth')->name('home');
 Route::get('/news', [HomeController::class, 'homepage1']);
 Route::get('/post_details/{id}', [HomeController::class, 'post_details']);
+Route::get('/service_details/{id}', [ServiceDetailsController::class, 'index']);
 // Route::get('post', [HomeController::class, 'post'])->middleware(['auth', 'admin']);
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -54,7 +58,11 @@ Route::middleware('auth')->group(function () {
     Route::get('/edit_faq/{id}', [FaqController::class, 'edit']);
     Route::post('/update_faq/{id}', [FaqController::class, 'update']);
     Route::get('/delete_faq/{id}', [FaqController::class, 'destroy']);
+
     
 });
+
+ // Route untuk detail service
+
 
 require __DIR__.'/auth.php';

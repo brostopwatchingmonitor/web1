@@ -8,6 +8,15 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
 
+  <!-- Slick CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"/>
+  <link rel="stylesheet" type="text/css" href="assets/css/main.css"/>
+
+  <!-- Slick JS -->
+    <script type="assets/js/main.js" src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+
+
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -24,27 +33,32 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
+  <style>
+    .circle-text {
+      display: inline-block; /* Agar lingkaran pas dengan ukuran teks */
+      padding: 20px 40px; /* Menambahkan ruang di sekitar teks */
+       /* Membuat border lingkaran */
+      /* Membuat border menjadi bentuk lingkaran */
+      position: relative;
+      font-size: 24px; /* Ukuran font untuk teks */
+      line-height: 1.5; /* Menambah spasi untuk menyesuaikan bentuk lingkaran */
+    }
+  </style>
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: HeroBiz
-  * Template URL: https://bootstrapmade.com/herobiz-bootstrap-business-template/
-  * Updated: Jun 29 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
+{{-- <base href="/public"> --}}
 
 <body class="index-page">
     @include('layout.header')
+      @yield('home')
     <div class="container">
-    
-    
+
+
         @yield('content')
     </div>
     @include('layout.footer')
-    
+
 </body>
 
 </html>

@@ -1,17 +1,39 @@
-  <header id="header" class="header d-flex align-items-center sticky-top">
+<header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
 
-      
+      <!-- Logo -->
+      <img src="assets/img/logo_fasya.png" class="logo d-flex align-items-center me-auto me-xl-0" style="width: 100px; height: auto;" alt="Logo Fasya Pratama Solusindo">
+
+      <!-- Navigation Menu -->
+      <nav id="navmenu" class="navmenu">
+        <ul class="d-flex">
+          <li><a href="{{ url('/') }}">Home</a></li>
+          <li><a href="{{ url('/') }}">About</a></li>
+          <li><a href="{{ url('/') }}">Services</a></li>
+          <li><a href="{{ url('/') }}">Portfolio</a></li>
+          <li><a href="{{ url('/') }}">Team</a></li>
+          <li><a href="{{ url('news') }}" class="active">Blog</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  {{-- <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+
+
         <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
         <img src="assets/img/logo_fasya.png" class="logo d-flex align-items-center me-auto me-xl-0" style="width: 100px; height:auto" alt="">
-        
-      
-      
+
+
+
       {{-- <header id="header" class="header d-flex align-items-center sticky-top">
         <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
-    
-          <img src="assets/img/logo_fasya.png" style="width: 100px; height:auto" alt=""> --}}
+
+          <img src="assets/img/logo_fasya.png" style="width: 100px; height:auto" alt="">
 
       <nav id="navmenu" class="navmenu">
         <ul>
@@ -21,7 +43,7 @@
           <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#team">Team</a></li>
           <li><a href="{{ url('news') }}" class="active">Blog</a></li>
-          
+
           {{-- <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="#">Dropdown 1</a></li>
@@ -38,7 +60,7 @@
               <li><a href="#">Dropdown 3</a></li>
               <li><a href="#">Dropdown 4</a></li>
             </ul>
-          </li> --}}
+          </li>
           <li><a href="#contact">Contact</a></li>
           @if (Route::has('login'))
           @auth
@@ -52,14 +74,14 @@
             </x-dropdown-link>
         </form>
           @endauth
-              
+
           @endif
-          
+
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      {{-- <a class="btn-getstarted" href="index.html#about">Get Started</a> --}}
+      {{-- <a class="btn-getstarted" href="index.html#about">Get Started</a>
 
     </div>
-  </header>
+  </header> --}}

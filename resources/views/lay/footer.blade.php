@@ -30,16 +30,16 @@
           <div class="col-lg-2 col-md-3 footer-links">
             <h4>Our Services</h4>
             <ul>
-              <li><a href="#">IT Consultants</a></li>
-              <li><a href="#">IT Developments</a></li>
-              <li><a href="#">Data Center</a></li>
-              <li><a href="#">Networking</a></li>
-              <li><a href="#">Security System</a></li>
+              <li><a href="#">Software</a></li>
               <li><a href="#">Hardware</a></li>
+              <li><a href="#">Maintenance</a></li>
+              {{--<li><a href="#">Networking</a></li>
+              <li><a href="#">Security System</a></li>
+              <li><a href="#">Hardware</a></li> --}}
             </ul>
           </div>
 
-          <div class="col-lg-2 col-md-3 footer-links">
+          {{--<div class="col-lg-2 col-md-3 footer-links">
             <h4>Hic solutasetp</h4>
             <ul>
               <li><a href="#">Molestiae accusamus iure</a></li>
@@ -49,6 +49,7 @@
               <li><a href="#">Sit quas consectetur</a></li>
             </ul>
           </div>
+          --}}
 
         </div>
       </div>

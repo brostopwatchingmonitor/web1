@@ -11,7 +11,7 @@ class ServiceController extends Controller
      * Display a listing of the resource.
      */
     public function index()
-    {   
+    {
         $service = Service::all();
         return view('home_admin.service', compact('service'));
     }
@@ -30,7 +30,7 @@ class ServiceController extends Controller
     public function store(Request $request)
     {
         date_default_timezone_set('Asia/Jakarta');
-        
+
 
         $service=new Service;
         $service->title = $request->title;
@@ -41,19 +41,19 @@ class ServiceController extends Controller
         if($image){
             $imagename=time().'.'.$image->getClientOriginalExtension();
             $request->image->move('serviceimage', $imagename);
-            $service->image = $imagename; 
+            $service->image = $imagename;
         }
-        
+
         $service->save() ;
         return redirect()->back()->with('message', 'Service added successfully');
     }
 
     /**
-     * Display the specified resource.
+     * Display the specified resource. untuk detail services
      */
     public function show(string $id)
     {
-        //
+
     }
 
     /**
@@ -62,7 +62,7 @@ class ServiceController extends Controller
     public function edit(string $id)
     {
         $service = Service::find($id);
-           
+
         return view('home_admin.edit_service',compact('service'));
     }
 
@@ -79,7 +79,7 @@ class ServiceController extends Controller
         if ($image) {
             $imagename=time().'.'.$image->getClientOriginalExtension();
             $request->image->move('serviceimage', $imagename);
-            $service->image = $imagename; 
+            $service->image = $imagename;
         }
         $service->save();
         return redirect('/service')->with('message1', 'Service Updated Successfully');
