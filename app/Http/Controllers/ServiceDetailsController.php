@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Service;
 use Illuminate\Http\Request;
+use App\Models\Faq;
 
 class ServiceDetailsController extends Controller
 {
@@ -13,9 +14,10 @@ class ServiceDetailsController extends Controller
     {
         // Ambil data service berdasarkan ID
         $service = Service::findOrFail($id);
+        $faq=Faq::all();
 
         // Kirim data ke view service-details
-        return view('home_page.service_details', compact('service'));
+        return view('home_page.service_details', compact('service', 'faq'));
     }
 
     /**

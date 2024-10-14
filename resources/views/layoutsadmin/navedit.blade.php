@@ -12,7 +12,7 @@
             <li ><a href="{{ url('home') }}"> <i class="icon-home"></i>Home </a></li>
             <li ><a href="{{ url('post_page') }}"> <i class="icon-padnote"></i>Add Posts</a></li>
             <li ><a href="{{ url('show_post') }}"> <i class="icon-windows"></i>Show Posts</a></li>
-            <li ><a href="{{ url('service') }}"> <i class="icon-padnote"></i>Service</a></li>
+            <li ><a href="{{ url('services') }}"> <i class="icon-padnote"></i>Service</a></li>
             <li><a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-windows"></i>Optional</a>
               <ul id="exampledropdownDropdown" class="collapse list-unstyled ">
                 <li ><a href="{{ url('faq') }}"> <i class="icon-padnote"></i>Faq</a></li>

@@ -1374,14 +1374,7 @@ Page Header Style
 --------------------------------------------- 
 */
 
-.page-heading {
-  background-image: url(../images/page-heading-bg.jpg);
-  background-position: center bottom;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 110px 0px;
-  text-align: center;
-}
+
 
 .page-heading span {
   background-color: #fff;

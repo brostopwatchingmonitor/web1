@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <title>Villa Agency - Property Detail Page</title>
+    <title>Fasya Solusindo |Service</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../service/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -19,12 +19,21 @@
     <link rel="stylesheet" href="../service/assets/css/owl.css">
     <link rel="stylesheet" href="../service/assets/css/animate.css">
     <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <style>.page-heading {
+      background-image: url(/serviceimage/{{$service->image}});
+      background-position: center bottom;
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 110px 0px;
+      text-align: center;
+    }</style>
     {{-- <base href="/public"> --}}
 <!--
 
 TemplateMo 591 villa agency
 
 https://templatemo.com/tm-591-villa-agency
+
 
 -->
   </head>
@@ -113,8 +122,8 @@ https://templatemo.com/tm-591-villa-agency
             <img src="/serviceimage/{{ $service->image }}" alt="">
           </div>
           <div class="main-content">
-            <span class="category">Apparment</span>
-            <h4>24 New Street Miami, OR 24560</h4>
+            <span class="category">IT</span>
+            <h4>{{ $service->title }}</h4>
             {{-- <p>Get <strong>the best villa agency</strong> HTML CSS Bootstrap Template for your company website. TemplateMo provides you the <a href="https://www.google.com/search?q=best+free+css+templates" target="_blank">best free CSS templates</a> in the world. Please tell your friends about it. Thank you. Cloud bread kogi bitters pitchfork shoreditch tumblr yr succulents single-origin coffee schlitz enamel pin you probably haven't heard of them ugh hella. --}}
             
             <br><br>{{ $service->description }}</p>
@@ -122,40 +131,18 @@ https://templatemo.com/tm-591-villa-agency
           <div class="accordion" id="accordionExample">
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingOne">
+                @foreach ($faq as $faq)
                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                  Best useful links ?
+                  {{ $faq->title }} ?
                 </button>
               </h2>
-              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+              <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  Dolor <strong>almesit amet</strong>, consectetur adipiscing elit, sed doesn't eiusmod tempor kinfolk tonx seitan crucifix 3 wolf moon bicycle rights keffiyeh snackwave wolf same vice, chillwave vexillologist incididunt ut labore consectetur  elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  {{ $faq->description }}
                 </div>
               </div>
             </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingTwo">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                  How does this work ?
-                </button>
-              </h2>
-              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  Dolor <strong>almesit amet</strong>, consectetur adipiscing elit, sed doesn't eiusmod tempor kinfolk tonx seitan crucifix 3 wolf moon bicycle rights keffiyeh snackwave wolf same vice, chillwave vexillologist incididunt ut labore consectetur  elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingThree">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                  Why is Villa the best ?
-                </button>
-              </h2>
-              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  Dolor <strong>almesit amet</strong>, consectetur adipiscing elit, sed doesn't eiusmod tempor kinfolk tonx seitan crucifix 3 wolf moon bicycle rights keffiyeh snackwave wolf same vice, chillwave vexillologist incididunt ut labore consectetur elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </div>
-              </div>
-            </div>
+            @endforeach
           </div>
         </div>
     </div>

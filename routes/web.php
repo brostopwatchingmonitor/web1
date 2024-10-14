@@ -48,11 +48,12 @@ Route::middleware('auth')->group(function () {
     Route::get('/delete_post/{id}', [AdminController::class, 'destroy']);
     Route::get('/edit_post/{id}', [AdminController::class, 'edit']);
     Route::post('/update_post/{id}', [AdminController::class, 'update']);
-    Route::get('/service', [ServiceController::class, 'index']);
-    Route::post('/addservice', [ServiceController::class, 'store']);
-    Route::get('/edit_service/{id}', [ServiceController::class, 'edit']);
-    Route::post('/update_service/{id}', [ServiceController::class, 'update']);
-    Route::get('/delete_service/{id}', [ServiceController::class, 'destroy']);
+    Route::resource('/services', ServiceController::class);
+    // Route::get('/service', [ServiceController::class, 'index']);
+    // Route::post('/addservice', [ServiceController::class, 'store']);
+    // Route::get('/edit_service/{id}', [ServiceController::class, 'edit']);
+    // Route::post('/update_service/{id}', [ServiceController::class, 'update']);
+    // Route::get('/delete_service/{id}', [ServiceController::class, 'destroy']);
     Route::get('/faq', [FaqController::class, 'index']);
     Route::post('/addfaq', [FaqController::class, 'store']);
     Route::get('/edit_faq/{id}', [FaqController::class, 'edit']);
