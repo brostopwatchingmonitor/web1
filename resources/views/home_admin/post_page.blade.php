@@ -56,7 +56,7 @@
             @endif
             <h1 class="post_title">Add Post</h1>
             <div>
-                <form action="{{ url('add_post') }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ url('post_page') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="div-center mb-3 ">
                         <label for="exampleFormControlInput1" class="form-label">Post Title</label>

@@ -294,14 +294,21 @@
 
     </div> --}}
     <div class="container" data-aos="fade-up" data-aos-delay="100">
-      <div class="card" style="border: 12px">
-        <div class="row gy-5 d-flex justify-content-center">
+      <div class="d-flex justify-content-center" data-aos="fade-up">
+        <button class="btn btn-primary" type="button" style="width: 160px; height:60px" data-bs-toggle="collapse" data-aos="fade-up" data-bs-target="#cardExample" aria-expanded="false" aria-controls="cardExample">
+           Software
+        </button>
+    </div>
+    <div class="collapse mt-3" id="cardExample" data-aos="fade-down" data-aos="flip-left">
+
+      <div class="card" style="border: 12px" data-aos="flip-left">
+        <div class="row gy-5 d-flex justify-content-center" data-aos="flip-left">
           
           <!-- Card besar yang menampilkan semua service (jika diperlukan, bisa ditambahkan di sini) -->
           
           <!-- Looping untuk masing-masing service -->
-          @foreach ($service as $service)
           <div class="col-xxl-3 col-md-6 col-sm-12 d-flex justify-content-center" data-aos="zoom-in" data-aos-delay="100">
+            @foreach ($service as $service)
             <div class="service-item">
               <div class="img">
                 <img src="/serviceimage/{{ $service->image }}" style="width: 300px; height:auto;" class="img-fluid" alt="Service Image">
@@ -318,10 +325,11 @@
                 {{-- <p>{{ $service->description }}</p> --}}
               </div>
             </div>
+            @endforeach
           </div>
-          @endforeach
         </div>
       </div>
+    </div>
     </div>
     
     
@@ -825,6 +833,7 @@
   <div id="preloader"></div>
 
   <!-- Vendor JS Files -->
+  
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
@@ -839,6 +848,11 @@
   {{-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"> --}}
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 
 
 

@@ -136,7 +136,7 @@ object-fit: cover;
             <h1 class="title_deg">Home</h1>
             <button onclick="myFunction()" class="btn btn-success">hide/show Table</button>
             <div id="myDIV">
-                <form action="{{ url('addservice') }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ url('services') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="div-center mb-3 ">
                         <label for="exampleFormControlInput1" class="form-label">Service Title</label>
@@ -180,8 +180,12 @@ object-fit: cover;
                         <td>{{ $service->title }}</td>
                         <td>{{ $service->description }}</td>
                         <td>{{ $service->image }}</td>
-                        <td><a href="{{ url('edit_service',$service->id) }}" class="btn btn-info">edit</a>
-                        <a href="{{ url('delete_service',$service->id) }}" onclick="confirmation1(event)" class="btn btn-warning">delete</a></td>
+                        <td><a href="{{ url('services/'.$service->id.'/edit') }}" class="btn btn-info">edit</a>
+                          <form action="{{ route('services.destroy', $service->id) }}" method="POST" style="display:inline;" onsubmit="return confirm('Are you sure you want to delete this item?');">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-warning">Delete</button>
+                        </form>
                     </tr>
                     @endforeach
                 </tbody>
