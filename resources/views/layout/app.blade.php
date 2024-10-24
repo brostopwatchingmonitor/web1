@@ -37,15 +37,23 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   
   <style>
-    .circle-text {
-      display: inline-block; /* Agar lingkaran pas dengan ukuran teks */
-      padding: 20px 40px; /* Menambahkan ruang di sekitar teks */
-       /* Membuat border lingkaran */
-      /* Membuat border menjadi bentuk lingkaran */
-      position: relative;
-      font-size: 24px; /* Ukuran font untuk teks */
-      line-height: 1.5; /* Menambah spasi untuk menyesuaikan bentuk lingkaran */
-    }
+/* Transisi smooth untuk animasi */
+ul a{
+ text-decoration: none;
+}
+/* About us menu */
+.custom-nav .nav-link {
+  background-color: transparent; /* Menghilangkan background */
+  color: #000; /* Warna teks */
+  border: none; /* Menghilangkan border */
+  border-bottom: 2px solid transparent; /* Garis bawah transparan saat tidak aktif */
+  border-radius: 0; /* Menghilangkan radius sudut */
+}
+
+.custom-nav .nav-link.active {
+  border-bottom: 2px solid #007bff; /* Garis bawah berwarna saat aktif */
+  color: #007bff; /* Warna teks saat aktif */
+}
   </style>
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
