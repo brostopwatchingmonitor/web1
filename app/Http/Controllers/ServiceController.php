@@ -82,9 +82,10 @@ class ServiceController extends Controller
             $service->image = $imagename;
         }
         $service->save();
-        return redirect('/service')->with('message1', 'Service Updated Successfully');
+        return redirect('/services')->with('message1', 'Service Updated Successfully');
     }
-
+//
+//
     /**
      * Remove the specified resource from storage.
      */

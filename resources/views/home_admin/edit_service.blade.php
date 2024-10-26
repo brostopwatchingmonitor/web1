@@ -56,8 +56,9 @@
         @endif
         <h1 class="post_title">Add Post</h1>
         <div>
-            <form action="{{ url('update_service',$service->id) }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('services.update', $service->id) }}" method="POST" enctype="multipart/form-data">
                 @csrf
+                @method('PUT')
                 <div class="div-center mb-3 ">
                     <label for="exampleFormControlInput1" class="form-label">Service Title</label>
                     <input type="title" name="title" class="form1-control" value="{{ $service->title }}" valid="exampleFormControlInput1">
