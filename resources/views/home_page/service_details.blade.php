@@ -39,7 +39,7 @@ https://templatemo.com/tm-591-villa-agency
   </head>
 
 <body>
-
+  @include('layout.header')
   <!-- ***** Preloader Start ***** -->
   {{-- <div id="js-preloader" class="js-preloader">
     <div class="preloader-inner">
@@ -104,22 +104,13 @@ https://templatemo.com/tm-591-villa-agency
   </header> --}}
   <!-- ***** Header Area End ***** -->
 
-  <div class="page-heading header-text">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <span class="breadcrumb"><a href="/">Home</a>  /  {{ $service->title }}</span>
-          <h3>{{ $service->title }}</h3>
-        </div>
-      </div>
-    </div>
-  </div>
+  
 
   <div class="single-property section">
     <div class="container">
         <div class="col-lg-8">
           <div class="main-image">
-            <img src="/serviceimage/{{ $service->image }}" alt="">
+            <img src="/serviceimage/{{ $service->image }}" style="height: auto; width:300px; margin-top:-122px;" alt="">
           </div>
           <div class="main-content">
             <span class="category">IT</span>
