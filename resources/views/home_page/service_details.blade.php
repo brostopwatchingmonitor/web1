@@ -39,7 +39,7 @@ https://templatemo.com/tm-591-villa-agency
   </head>
 
 <body>
-  @include('layout.header')
+  @include('layout.header1')
   <!-- ***** Preloader Start ***** -->
   {{-- <div id="js-preloader" class="js-preloader">
     <div class="preloader-inner">
