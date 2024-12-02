@@ -233,33 +233,33 @@
     </div>
     <div class="mt-3" id="cardExample">
 
-      <div class="card" style="border: 12px" >
-        <div class="row gy-5 d-flex justify-content-center">
-          
-          <!-- Card besar yang menampilkan semua service (jika diperlukan, bisa ditambahkan di sini) -->
-          
-          <!-- Looping untuk masing-masing service -->
-          <div class="col-xxl-3 col-md-6 col-sm-12 d-flex justify-content-center" data-aos="zoom-in">
+      <div class="card" style="border: 0px">
+        <div class="container py-5">
+          <div class="row gy-4 d-flex justify-content-center mx-3">
+            <!-- Looping untuk masing-masing service -->
             @foreach ($service as $service)
-            <div class="service-item">
-              <div class="img">
-                <img src="/serviceimage/{{ $service->image }}" style="width: 300px; height:auto;" class="img-fluid" alt="Service Image">
-              </div>
-              <div class="details position-relative">
-                <div class="icon">
-                  <a href="{{ url('service_details', $service->id) }}">
-                    <i class="bi bi-activity"></i>
-                  </a>
+            <div class="col-xl-3 col-md-6 col-sm-12 d-flex justify-content-center mb-4" data-aos="zoom-in">
+              <div class="service-item">
+                <div class="img" style="height: 300px">
+                  <img src="/serviceimage/{{ $service->image }}" class="img-fluid rounded shadow" style="width: 300px; height:auto" alt="Service Image">
                 </div>
-                <a href="{{ url('service_details', $service->id) }}" class="stretched-link">
-                  <h3>{{ $service->title }}</h3>
-                </a>
-                {{-- <p>{{ $service->description }}</p> --}}
+                <div class="details position-relative">
+                  <div class="icon">
+                    <a href="{{ url('service_details', $service->id) }}">
+                      <i class="bi bi-activity"></i>
+                    </a>
+                  </div>
+                  <a href="{{ url('service_details', $service->id) }}" class="stretched-link" style="text-decoration: none">
+                    <h3>{{ $service->title }}</h3>
+                  </a>
+                  {{-- <p>{{ $service->description }}</p> --}}
+                </div>
               </div>
             </div>
             @endforeach
           </div>
         </div>
+        
       </div>
     </div>
     </div>
