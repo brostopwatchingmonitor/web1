@@ -110,7 +110,7 @@ https://templatemo.com/tm-591-villa-agency
     <div class="container">
         <div class="col-lg-8">
           <div class="main-image">
-            <img src="/serviceimage/{{ $service->image }}" style="height: auto; width:300px; margin-top:-122px;" alt="">
+            <img src="{{ asset('storage/'.$service->image2) }}" style="height: auto; width:300px; margin-top:-122px;" alt="">
           </div>
           <div class="main-content">
             <span class="category">IT</span>

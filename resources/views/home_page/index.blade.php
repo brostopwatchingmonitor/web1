@@ -241,7 +241,7 @@
             <div class="col-xl-3 col-md-6 col-sm-12 d-flex justify-content-center mb-4" data-aos="zoom-in">
               <div class="service-item">
                 <div class="img" style="height: 300px">
-                  <img src="/serviceimage/{{ $service->image }}" class="img-fluid rounded" style="width: 300px; height:auto" alt="Service Image">
+                  <img src="{{ asset('storage/'.$service->image1) }}" class="img-fluid rounded" style="width: 300px; height:auto" alt="Service Image">
                 </div>
                 <div class="details position-relative">
                   <div class="icon">
