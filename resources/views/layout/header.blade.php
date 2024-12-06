@@ -6,13 +6,6 @@
         <!-- <img src="assets/img/logo.png" alt=""> -->
         <img src="assets/img/logo_fasya.png" class="logo d-flex align-items-center me-auto me-xl-0" style="width: 100px; height:auto; margin-left: 8px;" alt="">
 
-
-
-      {{-- <header id="header" class="header d-flex align-items-center sticky-top">
-        <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
-
-          <img src="assets/img/logo_fasya.png" style="width: 100px; height:auto" alt=""> --}}
-
       <nav id="navmenu" class="navmenu" style=" margin-left: -20px;" alt="">
         <ul>
           <li><a href="{{ url('/') }}" class="active">Home<br></a></li>

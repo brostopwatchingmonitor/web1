@@ -1,197 +1,217 @@
-<!DOCTYPE html>
-<html lang="en">
-
-  <head>
-    @include('lay_copy.header_include')
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-    <title>Fasya Solusindo |Service</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="../service/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-
-    <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="../service/assets/css/fontawesome.css">
-    <link rel="stylesheet" href="../service/assets/css/templatemo-villa-agency.css">
-    <link rel="stylesheet" href="../service/assets/css/owl.css">
-    <link rel="stylesheet" href="../service/assets/css/animate.css">
-    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
-    <style>.page-heading {
-      background-image: url(/serviceimage/{{$service->image}});
-      background-position: center bottom;
-      background-repeat: no-repeat;
-      background-size: cover;
-      padding: 110px 0px;
-      text-align: center;
-    }</style>
-    {{-- <base href="/public"> --}}
-<!--
-
-TemplateMo 591 villa agency
-
-https://templatemo.com/tm-591-villa-agency
-
-
--->
-  </head>
-
-<body>
-  @include('layout.header1')
-  <!-- ***** Preloader Start ***** -->
-  {{-- <div id="js-preloader" class="js-preloader">
-    <div class="preloader-inner">
-      <span class="dot"></span>
-      <div class="dots">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
-  </div> --}}
-  <!-- ***** Preloader End ***** -->
-
-  {{-- <div class="sub-header">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-8">
-          <ul class="info">
-            <li><i class="fa fa-envelope"></i> info@company.com</li>
-            <li><i class="fa fa-map"></i> Sunny Isles Beach, FL 33160</li>
-          </ul>
-        </div>
-        <div class="col-lg-4 col-md-4">
-          <ul class="social-links">
-            <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-            <li><a href="https://x.com/minthu" target="_blank"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-          </ul>
+{{-- <div class="col-lg-8">
+  <div class="main-image">
+    <img src="{{ asset('storage/'.$service->image2) }}" style="height: auto; width:300px; margin-top:-122px;" alt="">
+  </div>
+  <div class="main-content">
+    <span class="category">IT</span>
+    <h4>{{ $service->title }}</h4>
+    <br><br>{{ $service->description }}</p>
+  </div> 
+  <div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        @foreach ($faq as $faq)
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          {{ $faq->title }} ?
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          {{ $faq->description }}
         </div>
       </div>
     </div>
-  </div> --}}
-
-  <!-- ***** Header Area Start ***** -->
-  {{-- <header class="header-area header-sticky">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <nav class="main-nav">
-                    <!-- ***** Logo Start ***** -->
-                    <a href="index.html" class="logo">
-                        <h1>Villa</h1>
-                    </a>
-                    <!-- ***** Logo End ***** -->
-                    <!-- ***** Menu Start ***** -->
-                    <ul class="nav">
-                      <li><a href="index.html">Home</a></li>
-                      <li><a href="properties.html">Properties</a></li>
-                      <li><a href="property-details.html" class="active">Property Details</a></li>
-                      <li><a href="contact.html">Contact Us</a></li>
-                      <li><a href="#"><i class="fa fa-calendar"></i> Schedule a visit</a></li>
-                  </ul>   
-                    <a class='menu-trigger'>
-                        <span>Menu</span>
-                    </a>
-                    <!-- ***** Menu End ***** -->
-                </nav>
-            </div>
-        </div>
+    @endforeach
+  </div>
+  <div class="row gy-4 align-items-stretch justify-content-between features-item ">
+    <div class="col-lg-6 d-flex align-items-center features-img-bg" data-aos="zoom-out">
+      <img src="assets/img/features-light-3.jpg" class="img-fluid" alt="">
     </div>
-  </header> --}}
-  <!-- ***** Header Area End ***** -->
-
-  
-
-  <div class="single-property section">
-    <div class="container">
-        <div class="col-lg-8">
-          <div class="main-image">
-            <img src="{{ asset('storage/'.$service->image2) }}" style="height: auto; width:300px; margin-top:-122px;" alt="">
-          </div>
-          <div class="main-content">
-            <span class="category">IT</span>
-            <h4>{{ $service->title }}</h4>
-            {{-- <p>Get <strong>the best villa agency</strong> HTML CSS Bootstrap Template for your company website. TemplateMo provides you the <a href="https://www.google.com/search?q=best+free+css+templates" target="_blank">best free CSS templates</a> in the world. Please tell your friends about it. Thank you. Cloud bread kogi bitters pitchfork shoreditch tumblr yr succulents single-origin coffee schlitz enamel pin you probably haven't heard of them ugh hella. --}}
-            
-            <br><br>{{ $service->description }}</p>
-          </div> 
-          <div class="accordion" id="accordionExample">
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingOne">
-                @foreach ($faq as $faq)
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                  {{ $faq->title }} ?
-                </button>
-              </h2>
-              <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  {{ $faq->description }}
-                </div>
-              </div>
-            </div>
-            @endforeach
-          </div>
-        </div>
+    <div class="col-lg-5 d-flex justify-content-center flex-column" data-aos="fade-up">
+      <h3>Sunt consequatur ad ut est nulla</h3>
+      <p>Cupiditate placeat cupiditate placeat est ipsam culpa. Delectus quia minima quod. Sunt saepe odit aut quia voluptatem hic voluptas dolor doloremque.</p>
+      <ul>
+        <li><i class="bi bi-check"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></li>
+        <li><i class="bi bi-check"></i><span> Duis aute irure dolor in reprehenderit in voluptate velit.</span></li>
+        <li><i class="bi bi-check"></i> <span>Facilis ut et voluptatem aperiam. Autem soluta ad fugiat</span>.</li>
+      </ul>
+      <a href="#" class="btn btn-get-started align-self-start">Get Started</a>
     </div>
   </div>
-  @include('lay_copy.footer_include')
+</div> --}}
 
-  <!-- Scripts -->
-  <!-- Bootstrap core JavaScript -->
-  <script src="../service/vendor/jquery/jquery.min.js"></script>
-  <script src="../service/vendor/bootstrap/js/bootstrap.min.js"></script>
-  <script src="../service/assets/js/isotope.min.js"></script>
-  <script src="../service/assets/js/owl-carousel.js"></script>
-  <script src="../service/assets/js/counter.js"></script>
-  <script src="../service/assets/js/custom.js"></script>
+<!DOCTYPE html>
+  <html lang="en">
+  
+  <head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <base href="/public">
 
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+
+  <link href="assets_service/img/favicon.png" rel="icon">
+  <link href="assets_service/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  
+<style>
+  
+  /* 
+  NOTE: untuk card
+   */
+   .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem; /* Jarak antar kartu */
+    }
+    .card {
+      flex: 1 1 calc(50% - 1rem); /* Menyesuaikan ukuran kartu 50% dari lebar container */
+      max-width: 100%; /* Hindari overflow */
+    }
+    @media (max-width: 768px) {
+      .card {
+        flex: 1 1 100%; /* Pada layar kecil, kartu tampil satu baris */
+      }
+    }
+
+    .card-img {
+      height: 150px; /* Menentukan tinggi tetap */
+      object-fit: cover; /* Proporsi gambar tetap */
+    }
+
+    .card-large {
+      margin-bottom: 2rem;
+    }
+    .card-img-large {
+      height: 300px; /* Tinggi tetap untuk gambar besar */
+      width: 500px;
+      object-fit: cover; /* Menjaga proporsi gambar */
+    }
+    .separator {
+      border-top: 2px solid #ddd; /* Garis pembatas */
+      margin: 2rem 0; /* Jarak atas dan bawah garis */
+    }
+    .row {
+    transition: all 0.3s ease-in-out;
+    }
+    .row:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+</style>
+
+  </head>
+  <body>
+  <base href="/public">
+  <x-service_details.navbar.index></x-service_details.navbar.index>
+  <div class="container mt-5">
+    <!-- Large Card -->
+    <div class="row card-large align-items-center">
+      <div class="col-md-6">
+        <img src="{{ asset('storage/'.$service->image2) }}" class="img-fluid card-img-large rounded" alt="Large Card Image">
+      </div>
+      <div class="col-md-6">
+        <div class="card-body">
+          <h2 class="card-title">{{ $service->title }}</h2>
+          <p class="card-text">{{ $service->description }}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="separator"></div>
+
+    @forelse($service->liststuffs as $index => $list)
+    <div class="row mb-4 align-items-center">
+        @if($index % 2 == 0)
+            {{-- Posisi gambar di kiri untuk index genap --}}
+            <div class="col-md-4">
+                <img src="{{ Storage::url($list->image_list) }}" class="img-fluid card-img rounded-start" alt="Card Image">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <p class="card-text">{{ $list->description }}</p>
+                </div>
+            </div>
+        @else
+            {{-- Posisi gambar di kanan untuk index ganjil --}}
+            <div class="col-md-8">
+                <div class="card-body">
+                    <p class="card-text">{{ $list->description }}</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <img src="{{ Storage::url($list->image_list) }}" class="img-fluid card-img rounded-end" alt="Card Image">
+            </div>
+        @endif
+    </div>
+@empty
+    <div class="row">
+        <div class="col">
+            <p>No items found</p>
+        </div>
+    </div>
+@endforelse
+
+    <!-- Card 2 -->
+
+  </div>
+  <x-service_details.footer.index></x-service_details.footer.index>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+  <script type="assets/js/main.js" src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+  {{-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"> --}}
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
-</html>
-
-{{-- @extends('lay_copy.app')
-
-@section('title', 'service')
-
-@section('content2')
-
-    <body class="blog-page">
-
-        <main class="main">
-
-            <!-- Page Title -->
-            <!-- End Page Title -->
-
-            <!-- Blog Posts Section -->
-
-
-                    <h1>{{ $service->title }}</h1>
-                    <img src="/serviceimage/{{ $service->image }}" alt="{{ $service->title }}" style="width: 70%; height: auto;">
-                    <p>{{ $service->description }}</p>
-
-
-
-        <!-- Scroll Top -->
-        <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
-                class="bi bi-arrow-up-short"></i></a>
-
-        <!-- Preloader -->
-        <div id="preloader"></div>
-
-        <!-- Vendor JS Files -->
-        <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-        <script src="assets/vendor/php-email-form/validate.js"></script>
-        <script src="assets/vendor/aos/aos.js"></script>
-        <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-        <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-        <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-        <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-
-        <!-- Main JS File -->
-        <script src="assets/js/main.js"></script>
-
-
-    @endsection --}}
+  </html>

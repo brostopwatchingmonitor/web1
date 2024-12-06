@@ -117,7 +117,7 @@ class ServiceController extends Controller
            }
        }
 
-       return redirect()->route('services.show', $service);
+       return redirect()->route('/services', $service);
    }
 
    public function destroy(Service $service)
