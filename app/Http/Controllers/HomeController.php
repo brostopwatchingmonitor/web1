@@ -38,8 +38,12 @@ class HomeController extends Controller
     public function homepage() {
         $faq=Faq::all();
         $post = Admin::all();
-        $service = Service::all();
-        return view("home_page.index", compact('post','service','faq'));
+        $software = Service::where('kategori', 'software')->get();
+        $hardware = Service::where('kategori', 'hardware')->get();
+        $maintenance = Service::where('kategori', 'maintenance')->get();
+        $networking = Service::where('kategori', 'networking')->get();
+
+        return view("home_page.index", compact('post','faq','software','hardware', 'maintenance', 'networking'));
     }
     public function homepage1() {
         $post = Admin::all();
