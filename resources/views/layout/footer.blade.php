@@ -24,20 +24,16 @@
                             <li><a href="/#about" style="color: #fff; text-decoration: none;">About us</a></li>
                             <li><a href="/#services" style="color: #fff; text-decoration: none;">Services</a></li>
                             <li><a href="/#contact" style="color: #fff; text-decoration: none;">Contact</a></li>
-                            {{-- <li><a href="#">Terms of service</a></li>
-                            <li><a href="#">Privacy policy</a></li> --}}
                         </ul>
                     </div>
 
                     <div class="footer-links" style="flex: 1; padding-left: 20px;">
                         <h4 style="margin-bottom: 20px; font-size: 18px;">Our Services</h4>
                         <ul style="list-style: none; padding: 0; line-height: 2;">
-                            <li><a href="#" style="color: #fff; text-decoration: none;">Software</a></li>
-                            <li><a href="#" style="color: #fff; text-decoration: none;">Hardware</a></li>
-                            <li><a href="#" style="color: #fff; text-decoration: none;">Networking</a></li>
-                            <li><a href="#" style="color: #fff; text-decoration: none;">Maintenance</a></li>
-                            {{-- <li><a href="#">Security System</a></li>
-                            <li><a href="#">Hardware</a></li> --}}
+                            <li><a href="/#services" style="color: #fff; text-decoration: none;">Software</a></li>
+                            <li><a href="/#services" style="color: #fff; text-decoration: none;">Hardware</a></li>
+                            <li><a href="/#services" style="color: #fff; text-decoration: none;">Networking</a></li>
+                            <li><a href="/#services" style="color: #fff; text-decoration: none;">Maintenance</a></li>
                         </ul>
                     </div>
                 </div>
@@ -46,17 +42,6 @@
     </div>
 
 
-          {{--<div class="col-lg-2 col-md-3 footer-links">
-            <h4>Hic solutasetp</h4>
-            <ul>
-              <li><a href="#">Molestiae accusamus iure</a></li>
-              <li><a href="#">Excepturi dignissimos</a></li>
-              <li><a href="#">Suscipit distinctio</a></li>
-              <li><a href="#">Dilecta</a></li>
-              <li><a href="#">Sit quas consectetur</a></li>
-            </ul>
-          </div>
---}}
         </div>
       </div>
     </div>
@@ -75,13 +60,6 @@
             <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/herobiz-bootstrap-business-template/ -->
             Designed by <a href="https://bootstrapmade.com/">FasyaTeam</a>
           </div>
-        </div>
-
-        <div class="social-links order-first order-lg-last mb-3 mb-lg-0">
-          <a href=""><i class="bi bi-twitter-x"></i></a>
-          <a href=""><i class="bi bi-facebook"></i></a>
-          <a href=""><i class="bi bi-instagram"></i></a>
-          <a href=""><i class="bi bi-linkedin"></i></a>
         </div>
 
       </div>

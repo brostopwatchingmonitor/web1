@@ -293,3 +293,35 @@ var swiper = new Swiper(".swiper-container", {
         prevEl: ".swiper-button-prev",
     },
 });
+
+/**
+ * About Section
+ */
+
+document.addEventListener("DOMContentLoaded", function () {
+    const tabs = document.querySelectorAll(".nav-link");
+    const dynamicImage = document.getElementById("dynamic-image");
+
+    // Gambar yang akan digunakan untuk setiap tab
+    const images = {
+        about: "assets/img/gambar_kantor.jpg", // Gambar untuk About
+        workProcess: "assets/img/work_process.jpg", // Gambar untuk Work Process
+        experiences: "assets/img/experiences.jpg", // Gambar untuk Experiences
+    };
+
+    // Event listener untuk perubahan tab
+    tabs.forEach((tab) => {
+        tab.addEventListener("click", function () {
+            if (tab.href.includes("#about-tab1")) {
+                dynamicImage.src = images.about;
+                dynamicImage.alt = "Office Image for About";
+            } else if (tab.href.includes("#about-tab2")) {
+                dynamicImage.src = images.workProcess;
+                dynamicImage.alt = "Office Image for Work Process";
+            } else if (tab.href.includes("#about-tab3")) {
+                dynamicImage.src = images.experiences;
+                dynamicImage.alt = "Office Image for Experiences";
+            }
+        });
+    });
+});

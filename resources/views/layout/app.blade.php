@@ -4,12 +4,11 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Website Fasya</title>
+  <title>FPS</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
   <!-- Slick CSS -->
-  
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"/>
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"/>
   <link rel="stylesheet" type="text/css" href="assets/css/main.css"/>
@@ -19,8 +18,8 @@
 
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="assets/img/logo_web.png" rel="icon">
+  <link href="assets/img/logo_web.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -34,32 +33,10 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  
-  <style>
-/* Transisi smooth untuk animasi */
-ul a{
- text-decoration: none;
-}
-/* About us menu */
-.custom-nav .nav-link {
-  background-color: transparent; /* Menghilangkan background */
-  color: #000; /* Warna teks */
-  border: none; /* Menghilangkan border */
-  border-bottom: 2px solid transparent; /* Garis bawah transparan saat tidak aktif */
-  border-radius: 0; /* Menghilangkan radius sudut */
-}
-
-.custom-nav .nav-link.active {
-  border-bottom: 2px solid #007bff; /* Garis bawah berwarna saat aktif */
-  color: #007bff; /* Warna teks saat aktif */
-}
-  </style>
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
 </head>
-{{-- <base href="/public"> --}}
 
 <body class="index-page">
     @include('layout.header')

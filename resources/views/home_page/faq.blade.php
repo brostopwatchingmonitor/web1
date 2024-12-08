@@ -8,7 +8,7 @@
               Find Your Answers Here. We've compiled a list of common questions our customers often ask. If you can't find the answer you're looking for, feel free to reach out to us directly!
             </p>
           </div>
-  
+
           @foreach ($faq as $faq)
           <div class="faq-container px-xl-5" data-aos="fade-up" data-aos-delay="200">
             <div class="faq-item">
@@ -23,7 +23,7 @@
           </div>
           @endforeach
         </div>
-  
+
         <div class="col-lg-5 order-1 order-lg-2">
           <img src="assets/img/faq.jpg" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="100">
         </div>

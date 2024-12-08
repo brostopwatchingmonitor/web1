@@ -76,50 +76,57 @@
     </section><!-- /Hero Section -->
 
    <!-- About Section -->
-<section id="about" class="about section">
 
-  <!-- Section Title -->
-  <div class="container section-title" data-aos="fade-up">
-    <h2>About Us</h2>
-    <p>
-      We are an IT solutions provider focused on delivering innovative and reliable technology services. From software development to networking and maintenance, we tailor our solutions to help businesses thrive.
-    </p>
-  </div><!-- End Section Title -->
+   <section id="about" class="about section">
+    <div class="container section-title" data-aos="fade-up">
+        <h2>About Us</h2>
+        <p>
+            We are an IT solutions provider focused on delivering innovative and reliable technology services.
+            From software development to networking and maintenance, we tailor our solutions to help businesses thrive.
+        </p>
+    </div>
 
-  <div class="container" data-aos="fade-up">
-    <div class="row g-4 g-lg-5" data-aos="fade-up" data-aos-delay="200">
+    <div class="container" data-aos="fade-up">
+        <div class="row g-4 g-lg-5">
+            <!-- Image Section -->
+            <div class="col-lg-7 d-flex align-items-center">
+                <div class="about-img">
+                    <img id="dynamic-image" src="assets/img/gambar_kantor.jpg" class="img-fluid rounded shadow" alt="Office Image">
+                </div>
+            </div>
 
-      <div class="col-lg-7 d-flex align-items-center">
-        <div class="about-img">
-          <img src="assets/img/kantor_fps.jpg" class="img-fluid rounded shadow" alt="Office Image">
-        </div>
-      </div>
+            <div class="col-lg-5">
+                <!-- Tabs -->
+                <ul class="nav nav-pills mb-3">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-bs-toggle="pill" href="#about-tab1">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="pill" href="#about-tab2">Work Process</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="pill" href="#about-tab3">Experiences</a>
+                    </li>
+                </ul>
 
-      <div class="col-lg-5">
+                <!-- Tab 1 Content -->
+                <div class="tab-content">
+                    <!-- Tab 1 Content -->
+                    <div class="tab-pane fade show active" id="about-tab1">
+                        <p class="fst-italic">
+                            Information technology is a system capable of providing added value to an organization or an individual. In the current era of digitalization, PT Fasya Pratama Solusindo is here to provide information technology-based services with experienced experts and professional system design and development capabilities.
+                        </p>
+                    </div>
 
-        <!-- Tabs -->
-        <ul class="nav nav-pills custom-nav mb-3">
-          <li class="nav-item">
-            <a class="nav-link active" data-bs-toggle="pill" href="#about-tab1">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="pill" href="#about-tab2">Work Process</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="pill" href="#about-tab3">Experiences</a>
-          </li>
-        </ul><!-- End Tabs -->
+                    {{-- <!-- Tab 2 Content -->
 
-        <!-- Tab Content -->
-        <div class="tab-content">
-          <!-- Tab 1 Content -->
-          <div class="tab-pane fade show active" id="about-tab1">
-            <p class="fst-italic">
-              Information technology is a system capable of providing added value to an organization or an individual. In the current era of digitalization, PT Fasya Pratama Solusindo is here to provide information technology-based services with experienced experts and professional system design and development capabilities.
-            </p>
-          </div><!-- End Tab 1 Content -->
+                    <div class="tab-pane fade" id="about-tab2">
+                        <div class="work-process">
+                            <p>Steps for Work Process are described here...</p>
+                        </div>
+                    </div> --}}
 
-          <!-- Tab 2 Content -->
+<!-- Tab 2 Content -->
           <div class="tab-pane fade" id="about-tab2">
             <div class="work-process">
               <div class="process-step">
@@ -159,45 +166,173 @@
                 </div>
               </div>
             </div>
-          </div><!-- End Tab 2 Content -->
+          </div>
 
-        <!-- Tab 3 Content -->
-          <div class="tab-pane fade" id="about-tab3">
-            <div class="experiences">
-              <div class="experience-item">
-                <div class="experience-date">2015</div>
-                <div class="experience-content">
-                  <h4>Integrated Security System for Indonesian National Defense Institute</h4>
-                  <p>Provided outsourcing personnel in collaboration with CV Ifprosound for the management of an integrated security system.</p>
-                </div>
-              </div>
-              <div class="experience-item">
-                <div class="experience-date">2018</div>
-                <div class="experience-content">
-                  <h4>Maintenance Work for DIVKUM Polri Headquarters</h4>
-                  <p>Performed maintenance work in collaboration with PT SJH, ensuring the security and efficiency of the Polri headquarters' systems.</p>
-                </div>
-              </div>
-              <div class="experience-item">
-                <div class="experience-date">2021</div>
-                <div class="experience-content">
-                  <h4>NTB Police RTMC System Development</h4>
-                  <p>Subcontracted work for the procurement and development of the NTB Police RTMC System with Korlantas Polri.</p>
-                </div>
-              </div>
+<!-- End Tab 2 Content -->
+
+{{-- <!-- Tab 3 Content -->
+                    <div class="tab-pane fade" id="about-tab3">
+                        <div class="experiences">
+                            <p>Descriptions of experiences go here...</p>
+                        </div>
+                    </div> --}}
+
+<!-- Tab 3 Content -->
+
+<div class="tab-pane fade" id="about-tab3">
+    <div class="experiences grid-container">
+        <!-- Experience 1 -->
+        <div class="experience-item">
+            <div class="experience-date">2015</div>
+            <div class="experience-content">
+                <h4>Integrated Security System</h4>
+                <p>Provided outsourcing personnel for integrated security systems.</p>
             </div>
-          </div><!-- End Tab 3 Content -->
+        </div>
+        <!-- Experience 2 -->
+        <div class="experience-item">
+            <div class="experience-date">2017</div>
+            <div class="experience-content">
+                <h4>Maintenance Work</h4>
+                <p>Performed maintenance work ensuring security and efficiency.</p>
+            </div>
+        </div>
+        <!-- Experience 3 -->
+        <div class="experience-item">
+            <div class="experience-date">2021</div>
+            <div class="experience-content">
+                <h4>RTMC System Development</h4>
+                <p>Procurement and development of NTB Police RTMC System.</p>
+            </div>
+        </div>
 
+<!-- End Tab 3 Content -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-        </div><!-- End Tab Content -->
+{{-- <section id="about" class="about section">
 
-      </div>
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+      <h2>About Us</h2>
+      <p>
+        We are an IT solutions provider focused on delivering innovative and reliable technology services. From software development to networking and maintenance, we tailor our solutions to help businesses thrive.
+      </p>
+    </div><!-- End Section Title -->
 
-    </div><!-- End Row -->
+    <div class="container" data-aos="fade-up">
+      <div class="row g-4 g-lg-5" data-aos="fade-up" data-aos-delay="200">
 
-  </div><!-- End Container -->
+        <div class="col-lg-7 d-flex align-items-center">
+          <div class="about-img">
+            <img src="assets/img/kantor_fps.jpg" class="img-fluid rounded shadow" alt="Office Image">
+          </div>
+        </div>
 
-</section><!-- End About Section -->
+        <div class="col-lg-5">
+
+          <!-- Tabs -->
+          <ul class="nav nav-pills mb-3">
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="pill" href="#about-tab1">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="pill" href="#about-tab2">Work Process</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="pill" href="#about-tab3">Experiences</a>
+            </li>
+          </ul><!-- End Tabs -->
+
+          <!-- Tab Content -->
+          <div class="tab-content">
+            <!-- Tab 1 Content -->
+            <div class="tab-pane fade show active" id="about-tab1">
+              <p class="fst-italic">
+                Information technology is a system capable of providing added value to an organization or an individual. In the current era of digitalization, PT Fasya Pratama Solusindo is here to provide information technology-based services with experienced experts and professional system design and development capabilities.
+              </p>
+            </div><!-- End Tab 1 Content -->
+
+<!-- Tab 2 Work Process (IT Solutions Workflow) -->
+
+<div class="tab-pane fade" id="about-tab2">
+    <div class="work-process grid-container">
+        <!-- Step 1 -->
+        <div class="process-step">
+            <div class="step-icon">
+                <i class="bi bi-people"></i>
+            </div>
+            <div class="step-content">
+                <h4>Client Consultation</h4>
+                <p>We begin by understanding our client's challenges, goals, and expectations through in-depth consultations.</p>
+            </div>
+        </div>
+        <!-- Step 2 -->
+        <div class="process-step">
+            <div class="step-icon">
+                <i class="bi bi-pencil-square"></i>
+            </div>
+            <div class="step-content">
+                <h4>Tailored Solutions Design</h4>
+                <p>We design customized solutions to meet specific client needs.</p>
+            </div>
+        </div>
+        <!-- Step 3 -->
+        <div class="process-step">
+            <div class="step-icon">
+                <i class="bi bi-gear-wide-connected"></i>
+            </div>
+            <div class="step-content">
+                <h4>Implementation & Integration</h4>
+                <p>Seamless integration of software, hardware, and network systems.</p>
+            </div>
+        </div>
+        <!-- Add more steps as needed -->
+    </div>
+</div>
+
+<div class="tab-pane fade" id="about-tab3">
+    <div class="experiences grid-container">
+        <!-- Experience 1 -->
+        <div class="experience-item">
+            <div class="experience-date">2015</div>
+            <div class="experience-content">
+                <h4>Integrated Security System</h4>
+                <p>Provided outsourcing personnel for integrated security systems.</p>
+            </div>
+        </div>
+        <!-- Experience 2 -->
+        <div class="experience-item">
+            <div class="experience-date">2017</div>
+            <div class="experience-content">
+                <h4>Maintenance Work</h4>
+                <p>Performed maintenance work ensuring security and efficiency.</p>
+            </div>
+        </div>
+        <!-- Experience 3 -->
+        <div class="experience-item">
+            <div class="experience-date">2021</div>
+            <div class="experience-content">
+                <h4>RTMC System Development</h4>
+                <p>Procurement and development of NTB Police RTMC System.</p>
+            </div>
+        </div>
+        <!-- Add more experiences as needed -->
+    </div>
+</div>
+
+          </div><!-- End Tab Content -->
+
+        </div>
+
+      </div><!-- End Row -->
+
+    </div><!-- End Container -->
+
+  </section><!-- End About Section --> --}}
 
     <!-- Clients Section -->
     <div class="container">
@@ -224,38 +359,38 @@
         Our IT services cover all your business needs, from custom software and hardware solutions to secure networking and ongoing maintenance.
         We deliver reliable, high-quality solutions to keep your operations running smoothly and efficiently.
       </p>
-    </div><!-- End Section Title -->
-    <div class="container" data-aos="fade-up" >
-      <div class="d-flex justify-content-center" data-aos="fade-up">
-        <button class="btn btn-primary" type="button" style="width: 160px; height:60px; margin-bottom:60px">
-           Software
-        </button>
+    </div>
+    <!-- End Section Title -->
+
+    <div class="container" data-aos="fade-up" data-aos-delay="100" >
+      <!-- <div class="d-flex justify-content-center" data-aos="fade-up">
     </div>
     <div class="mt-3" id="cardExample">
 
       <div class="card" style="border: 12px" >
         <div class="row gy-5 d-flex justify-content-center">
-          
+
           <!-- Card besar yang menampilkan semua service (jika diperlukan, bisa ditambahkan di sini) -->
-          
+
           <!-- Looping untuk masing-masing service -->
-          <div class="col-xxl-3 col-md-6 col-sm-12 d-flex justify-content-center" data-aos="zoom-in">
+          <div class="row gy-5 d-flex justify-content-center align-items-center">
             @foreach ($service as $service)
-            <div class="service-item">
-              <div class="img">
-                <img src="/serviceimage/{{ $service->image }}" style="width: 300px; height:auto;" class="img-fluid" alt="Service Image">
-              </div>
-              <div class="details position-relative">
-                <div class="icon">
-                  <a href="{{ url('service_details', $service->id) }}">
-                    <i class="bi bi-activity"></i>
-                  </a>
+            <div class="col-xl-3 col-md-5" data-aos="zoom-in" data-aos-delay="200">
+                <div class="service-item">
+                    <div class="img">
+                        <img src="/serviceimage/{{ $service->image }}" alt="Service Image" class="img-fluid">
+                    </div>
+                    <div class="details position-relative">
+                        <div class="icon">
+                            <a href="{{ url('service_details', $service->id) }}">
+                                <i class="bi bi-chevron-down"></i>
+                            </a>
+                        </div>
+                        <a href="{{ url('service_details', $service->id) }}" class="stretched-link">
+                            <h3>{{ $service->title }}</h3>
+                        </a>
+                    </div>
                 </div>
-                <a href="{{ url('service_details', $service->id) }}" class="stretched-link">
-                  <h3>{{ $service->title }}</h3>
-                </a>
-                {{-- <p>{{ $service->description }}</p> --}}
-              </div>
             </div>
             @endforeach
           </div>
@@ -263,13 +398,14 @@
       </div>
     </div>
     </div>
-    
-    
+
+
   </section>
 
     </section>
 
    <!-- Faq Section -->
+
 <section id="faq" class="faq section">
   <div class="container-fluid">
     <div class="row gy-4">
@@ -291,7 +427,9 @@
               <p>{{ $faq->description }}</p>
             </div>
             <i class="faq-toggle bi bi-chevron-right"></i>
-          </div><!-- End Faq item-->
+          </div>
+
+          <!-- End Faq item-->
         </div>
         @endforeach
       </div>
@@ -302,9 +440,9 @@
     </div>
   </div>
 </section>
-        
-          
-        </div> 
+
+
+        </div>
       </div>
 
     </section><!-- /Recent Posts Section -->
@@ -360,6 +498,8 @@
 
           </div>
 
+<!-- Contact Form -->
+
           <div class="col-lg-8">
             <form action="https://formspree.io/f/mayrlono" method="POST" role="form" class="php-email-form">
               <div class="row">
@@ -379,7 +519,8 @@
 
               <div class="text-center"><button type="submit">Send Message</button></div>
             </form>
-          </div><!-- End Contact Form -->
+          </div>
+          <!-- End Contact Form -->
 
         </div>
 
@@ -394,7 +535,7 @@
   <div id="preloader"></div>
 
   <!-- Vendor JS Files -->
-  
+
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>

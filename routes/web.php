@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FaqController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\EmailController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ServiceController;
@@ -36,6 +37,7 @@ Route::get('/', [HomeController::class, 'homepage']);
 Route::get('home', [HomeController::class, 'index'])->middleware('auth')->name('home');
 Route::get('news', [HomeController::class, 'homepage1']);
 Route::get('service_details/{id}', [ServiceDetailsController::class, 'index']);
+//Route::post('/send-email', [EmailController::class, 'sendEmail'])->name('send.email');
 // Route::get('post', [HomeController::class, 'post'])->middleware(['auth', 'admin']);
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

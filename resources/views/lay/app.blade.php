@@ -4,14 +4,22 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Website Fasya</title>
+  <title>FPS</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
-  <base href="/public">
+
+  <!-- Slick CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"/>
+  <link rel="stylesheet" type="text/css" href="assets/css/main.css"/>
+
+  <!-- Slick JS -->
+    <script type="assets/js/main.js" src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="assets/img/logo_web.png" rel="icon">
+  <link href="assets/img/logo_web.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -27,102 +35,19 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-<style>
-  .page-content{
-        
-  }
-  .title_deg{
-    font-size: 30px;
-    font-weight: bold;
-    color: white;
-    padding: 30px;
-    text-align: center;
-  }
-  .table_deg{
-    border: 1px solid white;
-    width: 80%;
-    text-align: center;
-    margin-left: 10%;
-  }
-  .table_deg tr{
-    color: white;
-  }
-  .th_deg{
-    background-color: skyblue;
 
-  }
-  .img{
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-  }
-  /* portofolio section */
-
-#portofolios {
-padding: var(--sectionPadding);
-}
-.portofolios > h1 {
-position: relative;
-z-index: 2;
-font-weight: bold;
-color: #000;
-}
-
-.portofolios > img {
-width: auto;
-padding: 0;
-margin: 0 auto;
-height: 40px;
-position: relative;
-top: 75px;
-left: 139px;
-z-index: 1;
-transform: rotate(3deg);
--webkit-transform: rotate(3deg);
--moz-transform: rotate(3deg);
--ms-transform: rotate(3deg);
--o-transform: rotate(3deg);
-}
-
-.portofolio {
-border-radius: var(--itemBorderRadius);
-overflow: hidden;
-border: 1px solid #000;
-}
-
-.portofolio-cover {
-height: 250px;
-}
-
-.portofolio-cover img {
-width: 100%;
-height: 100%;
-object-fit: cover;
-}
-  .hehe{
-    gap: 120px;
-  }
-</style>
-
-  <!-- =======================================================
-  * Template Name: HeroBiz
-  * Template URL: https://bootstrapmade.com/herobiz-bootstrap-business-template/
-  * Updated: Jun 29 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
-  
 </head>
 
-<body class="index-page">
+<body class="service-page">
     @include('lay.header')
+      @yield('service')
     <div class="container">
-    
-    
-        @yield('content1')
+
+
+        @yield('content')
     </div>
     @include('lay.footer')
-    
+
 </body>
 
 </html>

@@ -907,34 +907,29 @@ section,
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center; /* Center align text */
+    text-align: center;
 }
 
+/* Swiper container and slide styles */
+
 .swiper-container {
-    width: 100%;
-    height: 100%; /* Full height */
-    margin: 0;
+    width: 100vw; /* Set to 100% of the viewport width */
+    height: 100vh; /* Set to 100% of the viewport height */
 }
 
 .swiper-slide {
-    width: 100%;
-    height: 100%; /* Ensure slides fill the container */
+    width: 100vw;
+    height: 100vh;
 }
 
-.slide-content {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
+/* Adjust image to cover the entire container */
 .slide-content img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensure images fill the space without distortion */
+    width: 100vw; /* 100% viewport width */
+    height: 100vh; /* 100% viewport height */
+    object-fit: cover; /* Ensures the image covers the container */
 }
+
+/* Overlay and Text Styles */
 
 .overlay {
     position: absolute;
@@ -945,7 +940,7 @@ section,
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center; /* Center align text */
+    text-align: center;
 }
 
 .overlay-bg {
@@ -954,15 +949,16 @@ section,
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Darker semi-transparent background */
+    background: rgba(0, 0, 0, 0.5); /* Transparansi background */
+    background-size: cover; /* Menutupi seluruh container */
+    background-position: center center; /* Pastikan gambar di tengah */
+    z-index: 1;
 }
 
 .overlay-text {
     position: relative;
     color: #fff;
-    text-align: center;
-    padding: 20px;
-    z-index: 1; /* Ensure text is above the overlay background */
+    z-index: 1; /* Ensure text appears above overlay */
 }
 
 .overlay-text h1 {
@@ -981,7 +977,9 @@ section,
     line-height: 1.5;
 }
 
-/* Responsive font sizes */
+/* Responsive Styles */
+
+/* Larger devices */
 @media (max-width: 1200px) {
     .overlay-text h1 {
         font-size: 2.2rem;
@@ -992,6 +990,7 @@ section,
     }
 }
 
+/* Tablets and smaller laptops */
 @media (max-width: 992px) {
     .overlay-text h1 {
         font-size: 2rem;
@@ -1006,20 +1005,51 @@ section,
     }
 }
 
+/* Responsive adjustments for mobile screens */
+
 @media (max-width: 768px) {
+    .overlay-bg {
+        background-size: cover; /* Memastikan gambar menutupi area di layar kecil */
+        background-position: center; /* Tetap di tengah di layar mobile */
+        background: rgba(
+            0,
+            0,
+            0,
+            0.6
+        ); /* Tambahkan transparansi lebih di layar kecil untuk meningkatkan kontras */
+    }
+
     .overlay-text h1 {
-        font-size: 1.75rem;
+        font-size: 1.75rem; /* Ukuran teks di mobile */
     }
 
     .overlay-text p {
         font-size: 0.9rem;
     }
+}
 
-    .hero {
-        height: 70vh; /* Further reduced height on smaller screens */
+@media (max-width: 576px) {
+    .overlay-bg {
+        background-size: cover;
+        background-position: center;
+        background: rgba(
+            0,
+            0,
+            0,
+            0.7
+        ); /* Meningkatkan transparansi untuk visibilitas lebih baik */
+    }
+
+    .overlay-text h1 {
+        font-size: 1.5rem; /* Ukuran teks lebih kecil di mobile kecil */
+    }
+
+    .overlay-text p {
+        font-size: 0.75rem;
     }
 }
 
+/* Small mobile screens */
 @media (max-width: 576px) {
     .overlay-text h1 {
         font-size: 1.5rem;
@@ -1031,6 +1061,11 @@ section,
 
     .hero {
         height: 60vh; /* Even smaller height for mobile */
+    }
+
+    .swiper-pagination-bullet {
+        width: 8px;
+        height: 8px;
     }
 
     .hero .btn-get-started,
@@ -1062,33 +1097,9 @@ section,
     background: #007bff; /* Active bullet color */
 }
 
+/* Swiper pagination styling */
 .swiper-pagination {
     bottom: 20px; /* Position pagination at the bottom */
-}
-
-/* Animation Styles */
-.hero .animated {
-    margin-bottom: 60px;
-    animation: up-down 2s ease-in-out infinite alternate-reverse both;
-}
-
-/* Adjustments for image animation on different screen sizes */
-@media (min-width: 992px) {
-    .hero .animated {
-        max-width: 45%;
-    }
-}
-
-@media (max-width: 991px) {
-    .hero .animated {
-        max-width: 60%;
-    }
-}
-
-@media (max-width: 575px) {
-    .hero .animated {
-        max-width: 80%;
-    }
 }
 
 /* Keyframe animation for smooth up-down movement */
@@ -1150,9 +1161,31 @@ section,
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
+
+.about-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s ease-in-out; /* Animasi perubahan gambar */
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    .about-img img {
+        width: 100%;
+        max-height: 300px; /* Batasi tinggi gambar pada layar kecil */
+        object-fit: cover;
+    }
+}
+
 .about .about-img {
     position: relative;
     margin: 60px 0 0 60px;
+}
+
+.about-tab1.active ~ #about-img {
+    display: block; /* Tampilkan hanya jika tab "About" aktif */
 }
 
 .about .about-img:before {
@@ -1234,6 +1267,67 @@ section,
     line-height: 0;
     margin-right: 8px;
     color: var(--accent-color);
+}
+
+/* Atur posisi tab container di tengah */
+.tab-pane {
+    display: flex;
+    justify-content: center; /* Pusatkan secara horizontal */
+    align-items: center; /* Pusatkan secara vertikal */
+    min-height: 70vh; /* Tinggi minimum untuk pusatkan konten */
+    padding: 20px; /* Tambahkan sedikit spasi */
+}
+
+/* Atur isi konten dalam grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsif */
+    gap: 20px; /* Jarak antar elemen */
+    width: 100%; /* Memenuhi lebar tab */
+    max-width: 1200px; /* Batas lebar maksimum */
+}
+
+/* Elemen dalam grid */
+.process-step,
+.experience-item {
+    background-color: #f8f9fa; /* Warna latar elemen */
+    border: 1px solid #dee2e6; /* Border ringan */
+    border-radius: 10px; /* Sudut melengkung */
+    padding: 20px; /* Spasi dalam */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow */
+}
+
+/* Style tambahan untuk ikon atau tanggal */
+.step-icon,
+.experience-date {
+    font-size: 24px;
+    font-weight: bold;
+    color: #007bff; /* Warna ikon atau tanggal */
+    margin-bottom: 10px;
+}
+
+/* Judul dan teks */
+.step-content h4,
+.experience-content h4 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.step-content p,
+.experience-content p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Satu kolom pada layar kecil */
+    }
+    .tab-pane {
+        padding: 10px; /* Kurangi padding untuk layar kecil */
+    }
 }
 
 /*--------------------------------------------------------------
@@ -1730,124 +1824,6 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Pricing Section
---------------------------------------------------------------*/
-.pricing .pricing-item {
-    background-color: var(--backgroun-color);
-    padding: 60px 40px;
-    box-shadow: 0 3px 20px -2px rgba(0, 0, 0, 0.1);
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.pricing .pricing-header {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)),
-        url("../img/pricing-bg.jpg") center center;
-    background-size: cover;
-    text-align: center;
-    padding: 40px;
-    margin: -60px -40px 0;
-}
-
-.pricing h3 {
-    font-weight: 600;
-    margin-bottom: 5px;
-    font-size: 36px;
-    color: var(--contrast-color);
-}
-
-.pricing h4 {
-    font-size: 48px;
-    color: var(--contrast-color);
-    font-weight: 400;
-    margin-bottom: 0;
-}
-
-.pricing h4 sup {
-    font-size: 28px;
-}
-
-.pricing h4 span {
-    color: color-mix(in srgb, var(--contrast-color), transparent 20%);
-    font-size: 24px;
-}
-
-.pricing ul {
-    padding: 30px 0;
-    list-style: none;
-    color: color-mix(in srgb, var(--default-color), transparent 30%);
-    text-align: left;
-    line-height: 20px;
-}
-
-.pricing ul li {
-    padding: 10px 0;
-    display: flex;
-    align-items: center;
-}
-
-.pricing ul i {
-    color: var(--accent-color);
-    font-size: 36px;
-    padding-right: 3px;
-    line-height: 0;
-}
-
-.pricing ul .na {
-    color: color-mix(in srgb, var(--default-color), transparent 60%);
-}
-
-.pricing ul .na i {
-    color: color-mix(in srgb, var(--default-color), transparent 60%);
-    font-size: 24px;
-    padding-left: 4px;
-}
-
-.pricing ul .na span {
-    text-decoration: line-through;
-}
-
-.pricing .buy-btn {
-    display: inline-block;
-    padding: 12px 40px;
-    border-radius: 6px;
-    color: var(--default-color);
-    transition: none;
-    font-size: 16px;
-    font-weight: 500;
-    transition: 0.3s;
-    border: 1px solid var(--default-color);
-}
-
-.pricing .buy-btn:hover {
-    background: var(--accent-color);
-    color: var(--contrast-color);
-    border-color: var(--accent-color);
-}
-
-.pricing .featured {
-    border-color: var(--accent-color);
-}
-
-.pricing .featured .pricing-header {
-    background: linear-gradient(
-            color-mix(in srgb, var(--accent-color), transparent 10%),
-            color-mix(in srgb, var(--accent-color), transparent 20%)
-        ),
-        url("../img/pricing-bg.jpg") center center;
-}
-
-.pricing .featured .buy-btn {
-    border-color: var(--accent-color);
-    background: var(--accent-color);
-    color: var(--contrast-color);
-}
-
-/*--------------------------------------------------------------
 # Faq Section
 --------------------------------------------------------------*/
 .faq {
@@ -1956,177 +1932,15 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Portfolio Section
---------------------------------------------------------------*/
-.portfolio .portfolio-filters {
-    padding: 0;
-    margin: 0 auto 20px auto;
-    list-style: none;
-    text-align: center;
-}
-
-.portfolio .portfolio-filters li {
-    cursor: pointer;
-    display: inline-block;
-    padding: 0;
-    font-size: 18px;
-    font-weight: 400;
-    margin: 0 10px;
-    line-height: 1;
-    margin-bottom: 5px;
-    transition: all 0.3s ease-in-out;
-}
-
-.portfolio .portfolio-filters li:hover,
-.portfolio .portfolio-filters li.filter-active {
-    color: var(--accent-color);
-}
-
-.portfolio .portfolio-filters li:first-child {
-    margin-left: 0;
-}
-
-.portfolio .portfolio-filters li:last-child {
-    margin-right: 0;
-}
-
-@media (max-width: 575px) {
-    .portfolio .portfolio-filters li {
-        font-size: 14px;
-        margin: 0 5px;
-    }
-}
-
-.portfolio .portfolio-content {
-    position: relative;
-    overflow: hidden;
-}
-
-.portfolio .portfolio-content img {
-    transition: 0.3s;
-}
-
-.portfolio .portfolio-content .portfolio-info {
-    opacity: 0;
-    position: absolute;
-    inset: 0;
-    z-index: 3;
-    transition: all ease-in-out 0.3s;
-    background: rgba(0, 0, 0, 0.6);
-    padding: 15px;
-}
-
-.portfolio .portfolio-content .portfolio-info h4 {
-    font-size: 14px;
-    padding: 5px 10px;
-    font-weight: 400;
-    color: #ffffff;
-    display: inline-block;
-    background-color: var(--accent-color);
-}
-
-.portfolio .portfolio-content .portfolio-info p {
-    position: absolute;
-    bottom: 10px;
-    text-align: center;
-    display: inline-block;
-    left: 0;
-    right: 0;
-    font-size: 16px;
-    font-weight: 600;
-    color: rgba(255, 255, 255, 0.8);
-}
-
-.portfolio .portfolio-content .portfolio-info .preview-link,
-.portfolio .portfolio-content .portfolio-info .details-link {
-    position: absolute;
-    left: calc(50% - 40px);
-    font-size: 26px;
-    top: calc(50% - 14px);
-    color: #fff;
-    transition: 0.3s;
-    line-height: 1.2;
-}
-
-.portfolio .portfolio-content .portfolio-info .preview-link:hover,
-.portfolio .portfolio-content .portfolio-info .details-link:hover {
-    color: var(--accent-color);
-}
-
-.portfolio .portfolio-content .portfolio-info .details-link {
-    left: 50%;
-    font-size: 34px;
-    line-height: 0;
-}
-
-.portfolio .portfolio-content:hover .portfolio-info {
-    opacity: 1;
-}
-
-.portfolio .portfolio-content:hover img {
-    transform: scale(1.1);
-}
-
-/*--------------------------------------------------------------
-# Recent Posts Section
---------------------------------------------------------------*/
-.recent-posts article {
-    background: var(--surface-color);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-    padding: 30px;
-    height: 100%;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.recent-posts .post-img {
-    max-height: 240px;
-    margin: -30px -30px 15px -30px;
-    overflow: hidden;
-}
-
-.recent-posts .post-category {
-    font-size: 16px;
-    color: color-mix(in srgb, var(--default-color), transparent 50%);
-    margin-bottom: 10px;
-}
-
-.recent-posts .title {
-    font-size: 20px;
-    font-weight: 700;
-    padding: 0;
-    margin: 0 0 20px 0;
-}
-
-.recent-posts .title a {
-    color: var(--heading-color);
-    transition: 0.3s;
-}
-
-.recent-posts .title a:hover {
-    color: var(--accent-color);
-}
-
-.recent-posts .post-author-img {
-    width: 50px;
-    border-radius: 50%;
-    margin-right: 15px;
-}
-
-.recent-posts .post-author {
-    font-weight: 600;
-    margin-bottom: 5px;
-}
-
-.recent-posts .post-date {
-    font-size: 14px;
-    color: color-mix(in srgb, var(--default-color), transparent 50%);
-    margin-bottom: 0;
-}
-
-/*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
+
+.container.section-title {
+    margin-top: -20px; /* Adjust this value to move the section upwards */
+    position: relative;
+    top: -20px; /* Adjust this value as needed to fine-tune the position */
+}
+
 .contact .info {
     background-color: var(--surface-color);
     padding: 40px;
