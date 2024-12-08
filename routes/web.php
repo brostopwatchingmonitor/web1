@@ -37,7 +37,11 @@ Route::get('/', [HomeController::class, 'homepage']);
 Route::get('home', [HomeController::class, 'index'])->middleware('auth')->name('home');
 Route::get('news', [HomeController::class, 'homepage1']);
 Route::get('service_details/{id}', [ServiceDetailsController::class, 'index']);
+<<<<<<< HEAD
 //Route::post('/send-email', [EmailController::class, 'sendEmail'])->name('send.email');
+=======
+
+>>>>>>> 9df9d5599493e92f435a04226c06ea7de51f727e
 // Route::get('post', [HomeController::class, 'post'])->middleware(['auth', 'admin']);
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -45,6 +49,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::resource('services', ServiceController::class);
     Route::resource('faq', FaqController::class);
+    Route::delete('/services/liststuffs{id}', [ServiceController::class, 'deleteListstuff'])->name('services.delete-liststuff');
 });
 
  // Route untuk detail service

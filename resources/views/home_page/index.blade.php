@@ -367,6 +367,7 @@
     </div>
     <div class="mt-3" id="cardExample">
 
+<<<<<<< HEAD
       <div class="card" style="border: 12px" >
         <div class="row gy-5 d-flex justify-content-center">
 
@@ -391,10 +392,146 @@
                         </a>
                     </div>
                 </div>
+=======
+      <div class="card" style="border: 0px">
+        <div class="container py-5">
+          <div class="row gy-4 d-flex justify-content-center mx-3">
+            <!-- Looping untuk masing-masing service -->
+            @foreach ($software as $service)
+            <div class="col-xl-3 col-md-6 col-sm-12 d-flex justify-content-center mb-4" data-aos="zoom-in">
+              <div class="service-item">
+                <div class="img" style="height: 300px">
+                  <img src="{{ asset('storage/'.$service->image1) }}" class="img-fluid rounded" style="width: 300px; height:auto" alt="Service Image">
+                </div>
+                <div class="details position-relative">
+                  <div class="icon">
+                    <a href="{{ url('service_details', $service->id) }}">
+                      <i class="bi bi-activity"></i>
+                    </a>
+                  </div>
+                  <a href="{{ url('service_details', $service->id) }}" class="stretched-link" style="text-decoration: none">
+                    <h3>{{ $service->title }}</h3>
+                  </a>
+                  {{-- <p>{{ $service->description }}</p> --}}
+                </div>
+              </div>
+>>>>>>> 9df9d5599493e92f435a04226c06ea7de51f727e
             </div>
             @endforeach
           </div>
         </div>
+        
+      </div>
+
+
+      <div class="d-flex justify-content-center" data-aos="fade-up">
+        <button class="btn btn-primary" type="button" style="width: 160px; height:60px; margin-bottom:60px">
+           Hardware
+        </button>
+    </div>
+    <div class="mt-3" id="cardExample">
+
+      <div class="card" style="border: 0px">
+        <div class="container py-5">
+          <div class="row gy-4 d-flex justify-content-center mx-3">
+            <!-- Looping untuk masing-masing service -->
+            @foreach ($hardware as $service)
+            <div class="col-xl-3 col-md-6 col-sm-12 d-flex justify-content-center mb-4" data-aos="zoom-in">
+              <div class="service-item">
+                <div class="img" style="height: 300px">
+                  <img src="{{ asset('storage/'.$service->image1) }}" class="img-fluid rounded" style="width: 300px; height:auto" alt="Service Image">
+                </div>
+                <div class="details position-relative">
+                  <div class="icon">
+                    <a href="{{ url('service_details', $service->id) }}">
+                      <i class="bi bi-activity"></i>
+                    </a>
+                  </div>
+                  <a href="{{ url('service_details', $service->id) }}" class="stretched-link" style="text-decoration: none">
+                    <h3>{{ $service->title }}</h3>
+                  </a>
+                  {{-- <p>{{ $service->description }}</p> --}}
+                </div>
+              </div>
+            </div>
+            @endforeach
+          </div>
+        </div>
+        
+      </div>
+
+
+      <div class="d-flex justify-content-center" data-aos="fade-up">
+        <button class="btn btn-primary" type="button" style="width: 160px; height:60px; margin-bottom:60px">
+          maintenance
+        </button>
+    </div>
+    <div class="mt-3" id="cardExample">
+
+      <div class="card" style="border: 0px">
+        <div class="container py-5">
+          <div class="row gy-4 d-flex justify-content-center mx-3">
+            <!-- Looping untuk masing-masing service -->
+            @foreach ($maintenance as $service)
+            <div class="col-xl-3 col-md-6 col-sm-12 d-flex justify-content-center mb-4" data-aos="zoom-in">
+              <div class="service-item">
+                <div class="img" style="height: 300px">
+                  <img src="{{ asset('storage/'.$service->image1) }}" class="img-fluid rounded" style="width: 300px; height:auto" alt="Service Image">
+                </div>
+                <div class="details position-relative">
+                  <div class="icon">
+                    <a href="{{ url('service_details', $service->id) }}">
+                      <i class="bi bi-activity"></i>
+                    </a>
+                  </div>
+                  <a href="{{ url('service_details', $service->id) }}" class="stretched-link" style="text-decoration: none">
+                    <h3>{{ $service->title }}</h3>
+                  </a>
+                  {{-- <p>{{ $service->description }}</p> --}}
+                </div>
+              </div>
+            </div>
+            @endforeach
+          </div>
+        </div>
+        
+      </div>
+
+
+      <div class="d-flex justify-content-center" data-aos="fade-up">
+        <button class="btn btn-primary" type="button" style="width: 160px; height:60px; margin-bottom:60px">
+           Networking
+        </button>
+    </div>
+    <div class="mt-3" id="cardExample">
+
+      <div class="card" style="border: 0px">
+        <div class="container py-5">
+          <div class="row gy-4 d-flex justify-content-center mx-3">
+            <!-- Looping untuk masing-masing service -->
+            @foreach ($networking as $service)
+            <div class="col-xl-3 col-md-6 col-sm-12 d-flex justify-content-center mb-4" data-aos="zoom-in">
+              <div class="service-item">
+                <div class="img" style="height: 300px">
+                  <img src="{{ asset('storage/'.$service->image1) }}" class="img-fluid rounded" style="width: 300px; height:auto" alt="Service Image">
+                </div>
+                <div class="details position-relative">
+                  <div class="icon">
+                    <a href="{{ url('service_details', $service->id) }}">
+                      <i class="bi bi-activity"></i>
+                    </a>
+                  </div>
+                  <a href="{{ url('service_details', $service->id) }}" class="stretched-link" style="text-decoration: none">
+                    <h3>{{ $service->title }}</h3>
+                  </a>
+                  {{-- <p>{{ $service->description }}</p> --}}
+                </div>
+              </div>
+            </div>
+            @endforeach
+          </div>
+        </div>
+        
       </div>
     </div>
     </div>

@@ -72,13 +72,49 @@
                     <textarea name="description" class="form1-control" id="exampleFormControlTextarea1" rows="3">{{ $service->description }}</textarea>
                 </div>
                 <div class="div-center mb-3">
-                <label class="form-label">Old Image</label>
-                <img class="form1-control" src="/serviceimage/{{ $service->image }}" alt="old image">
+                <label class="form-label">Old Image front</label>
+                <img class="form1-control" src="/serviceimage/{{ $service->image1 }}" alt="old image">
             </div>
                 <div class="div-center mb-3 ">
                     <label for="formFile" class="form-label">Update IMG</label>
-                    <input class="form1-control w" type="file" id="formFile" name="image">
+                    <input class="form1-control w" type="file" id="formFile" name="image1">
                 </div>
+                <div class="div-center mb-3">
+                    <label class="form-label">Old Image back</label>
+                    <img class="form1-control" src="/serviceimage/{{ $service->image2 }}" alt="old image">
+                </div>
+                    <div class="div-center mb-3 ">
+                        <label for="formFile" class="form-label">Update IMG</label>
+                        <input class="form1-control w" type="file" id="formFile" name="image2">
+                    </div>
+                    <div class="div-center mb-3 ">
+
+                        <select name="kategori">
+                            <option value="hardware" {{ $service->kategori == 'hardware' ? 'selected' : '' }}>Hardware</option>
+                            <option value="software" {{ $service->kategori == 'software' ? 'selected' : '' }}>Software</option>
+                            <option value="maintenance" {{ $service->kategori == 'maintenance' ? 'selected' : '' }}>Maintenance</option>
+                            <option value="networking" {{ $service->kategori == 'networking' ? 'selected' : '' }}>Networking</option>
+                        </select>
+                    </div>
+                    {{-- Existing Liststuffs --}}
+                    <div class="div-center mb-3">
+                        <button type="button" onclick="addNewListstuffInput()">Add More List</button>
+                    </div>
+                @foreach($service->liststuffs as $liststuff)
+                <div class="div-center mb-3">
+                    
+                    <div class="existing-liststuff">
+                        <textarea name="existing_descriptions[{{ $liststuff->id }}]">{{ $liststuff->description }}</textarea>
+                        <input type="file" name="existing_images[{{ $liststuff->id }}]">
+                        <a href="{{ route('services.delete-liststuff', $liststuff) }}" onclick="return confirm('Delete this item?')">Delete</a>
+                    </div>
+                    @endforeach
+                </div>
+
+                {{-- New Liststuffs --}}
+                <div id="new-liststuffs-container"></div>
+                
+                
                 <div class="div-center mb-3 ">
                     <input type="submit" class="btn btn-primary" value="submit">
                 </div>

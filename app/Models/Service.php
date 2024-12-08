@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Service extends Model
 {
     use HasFactory;
+    protected $fillable = ['title', 'description', 'image1', 'image2', 'kategori'];
+
+    public function liststuffs()
+    {
+        return $this->hasMany(Liststuff::class);
+    }
 }

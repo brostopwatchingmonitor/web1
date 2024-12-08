@@ -136,32 +136,74 @@ object-fit: cover;
             <h1 class="title_deg">Home</h1>
             <button onclick="myFunction()" class="btn btn-success">hide/show Table</button>
             <div id="myDIV">
-                <form action="{{ url('services') }}" method="POST" enctype="multipart/form-data">
+                {{-- <form action="{{ url('services') }}" method="POST" enctype="multipart/form-data">
                     @csrf
-                    <div class="div-center mb-3 ">
-                        <label for="exampleFormControlInput1" class="form-label">Service Title</label>
-                        <input type="title" name="title" class="form1-control" id="exampleFormControlInput1">
-                    </div>
-                    {{-- <div class="div-center mb-3 ">
-                        <label for="exampleFormControlTextarea1" class="form1-label">service Descripsion</label>
-                        <textarea name="descripsion" class="form1-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                    </div> --}}
                     <div class="div-center mb-3 d-flex align-items-center justify-content-center">
-                        <label for="exampleFormControlTextarea1" class="form-label">Service Description</label>
-                        <textarea name="description" class="form1-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        
                     </div>
-                    {{-- <div>
-                    <label for="">Add IMG</label>
-                    <input type="file" name="image">
-                </div> --}}
-                    <div class="div-center mb-3 ">
-                        <label for="formFile" class="form-label">Add IMG</label>
-                        <input class="form1-control w" type="file" id="formFile" name="image">
-                    </div>
-                    <div class="div-center mb-3 ">
-                        <input type="submit" class="btn btn-primary" value="submit">
-                    </div>
-                </form>
+            
+                  <div class="">
+                    
+                    <select id="kategori" name="kategori"  required>
+                        <option value="hardware">Hardware</option>
+                        <option value="software">Software</option>
+                        <option value="maintenance">Maintenance</option>
+                        <option value="networking">Networking</option>
+                    </select><br><br>
+                  </div>
+                  <!-- Liststuffs -->
+                  
+                  
+                
+                    
+                </form> --}}
+                <form action="{{ route('services.store') }}" method="POST" enctype="multipart/form-data">
+                  @csrf
+                  <div class="div-center mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Service Title :</label>
+                    <input type="text" name="title" placeholder="Title" class="form1-control" id="exampleFormControlInput1">
+                  </div>
+                  <div class="div-center mb-3 d-flex align-items-center justify-content-center">
+                    <label for="exampleFormControlTextarea1" class="form-label" >Deskripsi:</label>
+                    <textarea name="description" class="form1-control" id="exampleFormControlTextarea1" placeholder="Description" rows="3" ></textarea>
+                  </div>
+                  <div class="div-center mb-3 ">
+                    <label for="formFile" class="form-label">IMG Front</label>
+                    <input class="form1-control w" type="file" id="formFile" name="image1">
+                </div>
+                <div class="div-center mb-3 ">
+                  <label for="formFile" class="form-label">IMG BACK</label>
+                  <input class="form1-control w" type="file" id="formFile" name="image2">
+              </div>
+              <div class="div-center mb-3">
+                <label for="kategori" class="form-label">Category:</label>
+                    <select name="kategori" class="form1-control">
+                        <option value="hardware">Hardware</option>
+                        <option value="software">Software</option>
+                        <option value="maintenance">Maintenance</option>
+                        <option value="networking">Networking</option>
+                    </select>
+              </div>
+              <div class="div-center mb-3"> 
+                <button type="button" onclick="addListstuffInput()">Add More List</button>
+              </div>
+              
+              <div id="liststuff-container" class="div-center mb-3">
+                <div id="liststuffs-container">
+                  <div class="liststuff-input">
+                      <label for="exampleFormControlTextarea1" class="form-label" >Deskripsi:</label>
+                      <textarea name="descriptions[]" placeholder="List Description" ></textarea>
+                      <label for="exampleFormControlTextarea1" class="form-label" >IMG:</label>
+                      <input type="file" name="images[]" class="form1-control w">
+                  </div>
+              </div>
+            </div>
+
+                  <div class="div-center mb-3 ">
+                    <input type="submit" class="btn btn-primary" value="submit">
+                </div>
+                  
+              </form>
             </div>
             <table id="myTable" class="table table-stripped">
                 <thead>
@@ -169,23 +211,28 @@ object-fit: cover;
                         <th>id</th>
                         <th>title</th>
                         <th>desc</th>
-                        <th>image</th>
+                        <th>image1</th>
+                        <th>image2</th>
                         <th>action</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($service as $service)
+                    @foreach ($services as $service)
                     <tr>
                         <td>{{ $service->id }}</td>
                         <td>{{ $service->title }}</td>
                         <td>{{ $service->description }}</td>
-                        <td>{{ $service->image }}</td>
-                        <td><a href="{{ url('services/'.$service->id.'/edit') }}" class="btn btn-info">edit</a>
+                        <td>{{ $service->image1 }}</td>
+                        <td>{{ $service->image2 }}</td>
+                        <td>
+                          <a href="{{ route('services.edit', $service->id) }}" class="btn btn-info">Edit</a>
+                          
                           <form action="{{ route('services.destroy', $service->id) }}" method="POST" style="display:inline;" onsubmit="return confirm('Are you sure you want to delete this item?');">
-                            @csrf
-                            @method('DELETE')
-                            <button type="submit" class="btn btn-warning">Delete</button>
-                        </form>
+                              @csrf
+                              @method('DELETE')
+                              <button type="submit" class="btn btn-warning">Delete</button>
+                          </form>
+                      </td>
                     </tr>
                     @endforeach
                 </tbody>
@@ -203,6 +250,19 @@ object-fit: cover;
     <script src="admincss/js/charts-home.js"></script>
     <script src="admincss/js/front.js"></script>
     <script src="https://cdn.datatables.net/v/bs5/dt-2.1.4/datatables.min.js"></script>
+    <script>
+      function addListstuffInput() {
+          const container = document.getElementById('liststuffs-container');
+          container.insertAdjacentHTML('beforeend', `
+              <div class="liststuff-input">
+                  <label for="exampleFormControlTextarea1" class="form-label" >Deskripsi:</label>
+                  <textarea name="descriptions[]" placeholder="List Description" ></textarea>
+                  <label for="exampleFormControlTextarea1" class="form-label" >IMG:</label>
+                  <input type="file" name="images[]" class="form1-control w">
+              </div>
+          `);
+      }
+      </script>
     <script>let table = new DataTable('#myTable');</script>
     <script type="text/javascript">function confirmation1(ev)
         {
