@@ -54,6 +54,57 @@ ul a{
   border-bottom: 2px solid #007bff; /* Garis bawah berwarna saat aktif */
   color: #007bff; /* Warna teks saat aktif */
 }
+
+
+
+.btn-primary {
+        background-color: #007bff; /* Bootstrap primary color */
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 16px;
+        transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .btn-primary:hover {
+        background-color: #0056b3; /* Darker shade on hover */
+        transform: scale(1.05);
+    }
+
+    .service-item {
+        border: 1px solid #e0e0e0;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: box-shadow 0.3s;
+    }
+
+    .service-item:hover {
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .details {
+        padding: 15px;
+        text-align: center;
+    }
+
+    .details h3 {
+        font-size: 18px;
+        margin: 10px 0;
+        color: #333;
+    }
+
+    .img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f8f9fa;
+    }
+
+    .img img {
+        max-width: 100%;
+        height: auto;
+    }
+
   </style>
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
